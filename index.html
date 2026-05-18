@@ -1,0 +1,2375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TWYSTS Protein+ — Boldly seasoned protein pretzels</title>
+<meta name="description" content="TWYSTS Protein+ — boldly seasoned protein pretzels with 6g protein per serving. Visit us at the Sweets & Snacks Expo, May 19–21, 2026, Booth #4621.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- No analytics for launch — per client 2026-05-15, NO Google Analytics
+     and NO Meta/Facebook Pixel. Leave this block empty unless that changes. -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/2df523ba7c.js" crossorigin="anonymous"></script>
+
+<style>
+  /* ============================================================
+     TWYSTS Protein+ — Phase 2 visual design
+     ============================================================ */
+
+  @font-face {
+    font-family: "Baste";
+    src: url("Art/in-use/Fonts/BasteBTRIAL-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Blackbird";
+    src: url("Art/in-use/Fonts/Blackbird-CondensedMedium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Blackbird";
+    src: url("Art/in-use/Fonts/Blackbird-CondensedBold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "BlackbirdRegular";
+    src: url("Art/in-use/Fonts/Blackbird-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --black: #0E0E10;
+    --black-soft: #16161A;
+    --black-warm: #1E1A1A;
+    --cream: #F5F1E8;
+    --cream-warm: #ECE6D5;
+    --red: #D6242C;
+    --red-deep: #B41C24;
+    --teal: #3FB7C9;
+    --gold: #C8A85B;
+    --green: #5A8F3D;
+    --yellow: #E8B92C;
+    --ink: #0E0E10;
+    --muted-on-dark: rgba(255,255,255,0.62);
+    --muted-on-light: #6b6b6b;
+    --line-on-dark: rgba(255,255,255,0.12);
+    --line-on-light: rgba(14,14,16,0.12);
+    --maxw: 1280px;
+    --gutter: clamp(20px, 4vw, 40px);
+    --radius: 4px;
+    --font-display: "Big Shoulders Display", "Anton", Impact, sans-serif;
+    --font-baste: "Baste", "Big Shoulders Display", Impact, sans-serif;
+    --font-blackbird: "Blackbird", "Big Shoulders Display", Impact, sans-serif;
+    --font-blackbird-regular: "BlackbirdRegular", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --font-body: "Blackbird", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --flavor-accent: var(--gold);
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px; /* clear sticky header */
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--black);
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 2px;
+  }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    position: relative;
+    z-index: 2;
+  }
+
+  section { padding: clamp(64px, 9vw, 120px) 0; position: relative; }
+
+  /* Subtle film grain on dark sections */
+  .grain { position: relative; }
+  .grain::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 320 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.06;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    z-index: 1;
+  }
+
+  /* ----- Type ----- */
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.005em;
+    margin: 0 0 18px;
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+  h1, h2 {
+    font-family: var(--font-baste);
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  h1 { font-size: clamp(40px, 7vw, 76px); }
+  h2 { font-size: clamp(36px, 5.4vw, 64px); }
+  h3 { font-size: clamp(28px, 3.6vw, 44px); }
+  h4 { font-size: 16px; letter-spacing: 0.06em; line-height: 1.2; }
+  p  { margin: 0 0 16px; max-width: 60ch; }
+
+  .section-label {
+    font-family: var(--font-body);
+    font-size: 20px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 700;
+    max-width: none;
+    margin: 0 0 18px;
+  }
+
+  /* ----- Buttons ----- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--red);
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    min-height: 48px;
+    line-height: 1;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .btn:hover { background: var(--red-deep); }
+  .btn:active { transform: scale(0.98); }
+  .btn.outline {
+    background: transparent;
+    border: 1.5px solid #fff;
+    color: #fff;
+  }
+  .btn.outline:hover { background: #fff; color: var(--ink); }
+
+  /* ----- Header / nav ----- */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--black);
+    color: #fff;
+    border-bottom: 1px solid var(--line-on-dark);
+  }
+  .site-header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .site-header .logo {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    line-height: 0;
+  }
+  .site-header .logo svg { display: block; height: 28px; width: auto; }
+  @media (min-width: 768px) {
+    .site-header .logo svg { height: 34px; }
+  }
+  .header-left { display: flex; align-items: center; gap: 22px; }
+  .nav-divider {
+    display: none;
+    color: rgba(255,255,255,0.22);
+    font-weight: 200;
+    font-size: 22px;
+    user-select: none;
+    line-height: 1;
+  }
+  @media (min-width: 768px) { .nav-divider { display: inline-block; } }
+  .nav-list {
+    display: none;
+    list-style: none;
+    margin: 0; padding: 0;
+    gap: 30px;
+  }
+  .nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: color 0.15s ease;
+  }
+  .nav-list a:hover { color: var(--red); }
+  .nav-cta {
+    display: inline-flex;
+    height: 40px;
+    min-height: 0;
+    padding: 0 12px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+  @media (min-width: 768px) {
+    .nav-cta {
+      height: 44px;
+      padding: 0 16px;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+    }
+  }
+  /* Header right side: holds the primary CTA on desktop;
+     uses display:contents on mobile so children flow as direct flex items of .wrap */
+  .header-end { display: contents; }
+  @media (min-width: 768px) {
+    .header-end {
+      display: flex;
+      align-items: center;
+      position: relative;  /* anchor for the absolute booth-link */
+    }
+  }
+  /* Booth link — fades in when the visitor scrolls past the booth strip.
+     Absolutely positioned to the left of the nav CTA so its appearance
+     doesn't reflow the surrounding layout. */
+  .booth-link {
+    display: none;
+    color: var(--red);
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: var(--font-body);
+    white-space: nowrap;
+    line-height: 1;
+    transition: color 0.2s ease;
+  }
+  .booth-link:hover { color: #fff; text-decoration: none; }
+  @media (min-width: 768px) {
+    .booth-link {
+      display: inline-flex;
+      align-items: center;
+      position: absolute;
+      right: calc(100% + 16px);
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease, color 0.3s ease;
+    }
+    .scrolled-past-booth .booth-link {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  @media (min-width: 768px) {
+    .nav-list { display: flex; }
+  }
+
+  /* ----- Hero with pretzel cascade ----- */
+  .hero {
+    background:
+      radial-gradient(ellipse 75% 65% at 50% 38%,
+        rgba(255,255,255,0.22) 0%,
+        rgba(255,255,255,0.10) 35%,
+        transparent 75%),
+      var(--black);
+    color: #fff;
+    text-align: center;
+    padding: clamp(72px, 11vw, 144px) 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-copy { max-width: 720px; margin: 0 auto; position: relative; z-index: 5; }
+
+  .pretzel-cascade {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .pretzel-wrap {
+    position: absolute;
+    top: 0;
+    transform: translate3d(0, var(--scroll-y, 0px), 0);
+    will-change: transform;
+  }
+  .pretzel-wrap.layer-ambient { z-index: 0; }
+  .pretzel-wrap.layer-ambient .pretzel-inner { opacity: 0.32; }
+  .pretzel-wrap.layer-back    { z-index: 1; }
+  .pretzel-wrap.layer-mid     { z-index: 3; }
+  .pretzel-wrap.layer-front   { z-index: 7; }
+  .pretzel-inner {
+    filter: blur(var(--p-blur, 0));
+    transform-origin: center;
+    animation: pretzel-fall var(--p-dur, 14s) linear infinite;
+    animation-delay: var(--p-delay, 0s);
+  }
+  .pretzel-inner img {
+    display: block;
+    width: var(--p-size, 110px);
+    height: auto;
+    user-select: none;
+  }
+  @keyframes pretzel-fall {
+    0%   { transform: translateY(-35vh) rotate(var(--p-rot, 0deg)); }
+    100% { transform: translateY(135vh) rotate(calc(var(--p-rot, 0deg) + 25deg)); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pretzel-inner { animation: none; transform: rotate(var(--p-rot, 0deg)); }
+    .pretzel-wrap  { transform: none !important; }
+  }
+
+  /* ----- Flavor selection burst ----- */
+  .flavor-burst {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 80;
+  }
+  .burst-pretzel {
+    position: absolute;
+    display: block;
+    top: 0;
+    /* Start off-screen + invisible so they don't flash at top:0 before
+       the animation begins (covers the random animation-delay gap too). */
+    transform: translateY(-25vh);
+    opacity: 0;
+    animation: burst-fall var(--p-dur, 3.5s) cubic-bezier(0.4, 0, 0.75, 0.55) both;
+    will-change: transform, opacity;
+    user-select: none;
+  }
+  @keyframes burst-fall {
+    0%   { transform: translateY(-25vh) rotate(var(--p-rot, 0deg)); opacity: 0; }
+    8%   { opacity: 1; }
+    88%  { opacity: 1; }
+    100% { transform: translateY(120vh) rotate(calc(var(--p-rot, 0deg) + 45deg)); opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .flavor-burst { display: none; }
+  }
+  .hero-logo {
+    display: block;
+    margin: 0 auto 32px;
+    max-width: 320px;
+    height: auto;
+  }
+  @media (min-width: 768px) { .hero-logo { max-width: 380px; } }
+  .hero h1 {
+    font-size: clamp(40px, 10vw, 84px);
+    margin: 0 auto 22px;
+    white-space: nowrap;
+  }
+  .hero .lede {
+    font-size: clamp(24px, 2.4vw, 28px);
+    color: var(--muted-on-dark);
+    max-width: 56ch;
+    margin: 0 auto 36px;
+    font-weight: 500;
+  }
+  .hero-badges {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .hero-badge {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    width: 96px;
+    height: 96px;
+    padding: 14px;
+    background: url("Art/in-use/SVG/badge-shape-thin.svg") no-repeat center / 100% 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-blackbird);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.05;
+  }
+
+  /* ----- Booth strip ----- */
+  .booth-strip {
+    background: var(--red);
+    color: #fff;
+    padding: 22px 0;
+    text-align: center;
+  }
+  .booth-strip .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px 0;
+  }
+  .booth-strip span {
+    font-family: var(--font-blackbird);
+    font-size: 19px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .booth-strip span + span::before {
+    content: '|';
+    margin: 0 22px;
+    color: #fff;
+    opacity: 0.45;
+    font-weight: 300;
+  }
+  @media (max-width: 767px) {
+    .booth-strip .wrap { gap: 8px 0; }
+    .booth-strip .wrap > span:nth-child(1) { flex-basis: 100%; }
+    .booth-strip .wrap > span:nth-child(2)::before { content: none; }
+    .booth-strip span + span::before { margin: 0 14px; }
+    .booth-strip span { font-size: 19px; letter-spacing: 0.1em; }
+    .booth-strip .wrap > span:nth-child(1) { font-size: 24px; }
+  }
+
+  /* ----- Why TWYSTS ----- */
+  .why {
+    background: var(--black-soft);
+    color: #fff;
+    text-align: center;
+  }
+  .why p:not(.section-label) {
+    margin: 0 auto 16px;
+    color: var(--muted-on-dark);
+    max-width: none;
+    font-size: 20px;
+    font-family: var(--font-blackbird-regular);
+    font-weight: 400;
+  }
+  /* Snap-in-half pretzel — sits between the why intro and the stat grid.
+     A whole pretzel shows by default; on scroll past a threshold it swaps
+     to two halves that translate + rotate apart, with a one-shot crumb
+     pop spawned in the center at the moment of break. */
+  .pretzel-snap {
+    --break: 0;
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    height: clamp(72px, 11vw, 120px);
+    margin: clamp(40px, 6vw, 72px) auto clamp(40px, 6vw, 72px);
+  }
+  @media (max-width: 767px) {
+    .pretzel-snap {
+      max-width: none;
+      height: clamp(96px, 22vw, 140px);
+    }
+  }
+  .pretzel-snap .snap-whole,
+  .pretzel-snap .snap-half {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: auto;
+    user-select: none;
+    pointer-events: none;
+    will-change: transform;
+  }
+  .pretzel-snap .snap-whole {
+    /* Whole pretzel art is a much wider/thinner crop than the halves;
+       size it down so its width matches the two halves' combined width. */
+    height: 55%;
+    transform: translate(-50%, -50%);
+  }
+  .pretzel-snap .snap-half {
+    opacity: 0;
+    transform-origin: center;
+  }
+  .pretzel-snap.broken .snap-whole { opacity: 0; }
+  .pretzel-snap.broken .snap-half  { opacity: 1; }
+  .pretzel-snap .snap-left {
+    transform:
+      translate(calc(-100% + 6px - var(--break) * 56px), calc(-50% + var(--break) * 14px))
+      rotate(calc(var(--break) * -10deg));
+  }
+  .pretzel-snap .snap-right {
+    transform:
+      translate(calc(-6px + var(--break) * 56px), calc(-50% + var(--break) * 14px))
+      rotate(calc(var(--break) * 10deg));
+  }
+  .pretzel-snap .snap-burst {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .pretzel-snap .snap-crumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+    max-width: none;
+    animation: snap-crumb-fly var(--cdur, 0.9s) cubic-bezier(0.2, 0.6, 0.4, 1) forwards;
+  }
+  @keyframes snap-crumb-fly {
+    0%   { transform: translate(-50%, -50%) rotate(0deg); opacity: 1; }
+    100% { transform: translate(calc(-50% + var(--cx)), calc(-50% + var(--cy))) rotate(var(--crot, 90deg)); opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pretzel-snap { --break: 0; }
+    .pretzel-snap .snap-half { opacity: 0 !important; }
+    .pretzel-snap .snap-whole { opacity: 1 !important; }
+  }
+  /* Mobile: 3 + 2 grid, second row centered.
+     Desktop (768+): all 5 on one row. */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    margin: 56px auto 0;
+    max-width: 520px;
+    justify-content: center;
+  }
+  .stat-grid > .stat { grid-column: span 2; }
+  .stat-grid > .stat:nth-child(4) { grid-column: 2 / span 2; }
+  .stat-grid > .stat:nth-child(5) { grid-column: 4 / span 2; }
+  @media (min-width: 768px) {
+    .stat-grid {
+      grid-template-columns: repeat(5, 1fr);
+      max-width: 1100px;
+      gap: 24px;
+    }
+    .stat-grid > .stat,
+    .stat-grid > .stat:nth-child(4),
+    .stat-grid > .stat:nth-child(5) { grid-column: auto; }
+  }
+  /* Mobile: line-break headline sentences and intro sentences. */
+  @media (max-width: 767px) {
+    #why-h > span { display: block; }
+    .why-intro > span { display: block; }
+  }
+  .stat {
+    aspect-ratio: 1 / 1;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: 18%;
+    background: url("Art/in-use/SVG/badge-shape.svg") no-repeat center / 100% 100%;
+    color: #fff;
+  }
+  .stat .num {
+    font-family: var(--font-baste);
+    display: block;
+    font-size: clamp(24px, 3.4vw, 38px);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 0.9;
+    margin-bottom: 16px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .stat .label {
+    font-family: var(--font-blackbird);
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+  }
+
+  /* ----- Lineup ----- */
+  .lineup {
+    background: var(--black);
+    color: #fff;
+    text-align: center;
+  }
+  .lineup p:not(.section-label) {
+    margin: 0 auto 16px;
+    color: var(--muted-on-dark);
+    font-size: 20px;
+    font-family: var(--font-blackbird-regular);
+    font-weight: 400;
+  }
+  /* Mobile: 2 + 2 + 1 (last item centered).
+     Desktop (768+): all 5 in one row. */
+  .product-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 56px;
+    overflow: visible;
+  }
+  .product-row > .product-card { grid-column: span 2; }
+  .product-row > .product-card:nth-child(5) { grid-column: 2 / span 2; }
+  @media (min-width: 768px) {
+    .product-row { grid-template-columns: repeat(5, 1fr); gap: 64px; }
+    .product-row > .product-card,
+    .product-row > .product-card:nth-child(5) { grid-column: auto; }
+  }
+  @media (max-width: 767px) {
+    .lineup-intro > span { display: block; }
+  }
+  .product-card {
+    text-align: center;
+    position: relative;
+    overflow: visible;
+    /* Drop-in entry — set when JS-eligible. Reduced-motion users skip this. */
+    opacity: 0;
+    transform: translateY(-60px);
+    transition:
+      opacity 0.55s cubic-bezier(0.2, 0.7, 0.3, 1),
+      transform 0.75s cubic-bezier(0.34, 1.45, 0.64, 1);
+  }
+  .product-row.is-entered .product-card { opacity: 1; transform: translateY(0); }
+  .product-row.is-entered .product-card:nth-child(1) { transition-delay: 0s; }
+  .product-row.is-entered .product-card:nth-child(2) { transition-delay: 0.12s; }
+  .product-row.is-entered .product-card:nth-child(3) { transition-delay: 0.24s; }
+  .product-row.is-entered .product-card:nth-child(4) { transition-delay: 0.36s; }
+  .product-row.is-entered .product-card:nth-child(5) { transition-delay: 0.48s; }
+  @media (prefers-reduced-motion: reduce) {
+    .product-card { opacity: 1; transform: none; transition: none; }
+  }
+  /* Spotlight halo + grain — hidden by default, fade in on hover. */
+  .product-card::before {
+    content: '';
+    position: absolute;
+    inset: -28% -16% 6% -16%;
+    background: radial-gradient(ellipse 62% 55% at 50% 55%,
+      var(--spotlight, transparent),
+      transparent 72%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .product-card::after {
+    content: '';
+    position: absolute;
+    inset: -28% -16% 6% -16%;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-size: 220px 220px;
+    background-repeat: repeat;
+    -webkit-mask-image: radial-gradient(ellipse 62% 55% at 50% 55%, #000, transparent 72%);
+            mask-image: radial-gradient(ellipse 62% 55% at 50% 55%, #000, transparent 72%);
+    mix-blend-mode: overlay;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .product-card:hover::before { opacity: 1; }
+  .product-card:hover::after  { opacity: 0.45; }
+  .product-card > * { position: relative; z-index: 1; }
+  .product-card.original     { --spotlight: rgba(200, 168,  91, 0.50); }
+  .product-card.twistedheat  { --spotlight: rgba(214,  36,  44, 0.50); }
+  .product-card.pickle       { --spotlight: rgba( 90, 143,  61, 0.50); }
+  .product-card.alldressed   { --spotlight: rgba( 63, 183, 201, 0.50); }
+  .product-card.honeymustard { --spotlight: rgba(232, 185,  44, 0.50); }
+  .bag-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: contain;
+  }
+  .product-card .bag-img {
+    transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1);
+    transform-origin: center bottom;
+  }
+  .product-card:hover .bag-img {
+    transform: translateY(-8px) scale(1.05);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .product-card .bag-img,
+    .product-card::before,
+    .product-card::after { transition: none; }
+  }
+  .product-card h4 {
+    font-family: var(--font-baste);
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin: 22px 0 4px;
+    font-size: clamp(20px, 1.8vw, 26px);
+    line-height: 1;
+  }
+  .product-card.original     h4 { color: var(--gold); }
+  .product-card.twistedheat  h4 { color: var(--red); }
+  .product-card.pickle       h4 { color: var(--green); }
+  .product-card.alldressed   h4 { color: var(--teal); }
+  .product-card.honeymustard h4 { color: var(--yellow); }
+  .lineup .product-card .meta {
+    margin: 0;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    color: var(--muted-on-dark);
+    text-transform: uppercase;
+  }
+
+  /* ----- Flavor Explorer ----- */
+  .flavor-explorer {
+    display: grid;
+    gap: 40px;
+    margin-top: 88px;
+    padding-top: 80px;
+    border-top: 1px solid var(--line-on-dark);
+    text-align: left;
+  }
+  .flavor-explorer p:not(.section-label) { margin-left: 0; margin-right: 0; color: var(--muted-on-dark); }
+  @media (min-width: 900px) {
+    .flavor-explorer {
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      align-items: center;
+    }
+  }
+  .flavor-stage .bag-img {
+    width: 100%;
+    max-width: 460px;
+    margin: 0;
+  }
+  .flavor-detail .section-label {
+    color: var(--flavor-accent);
+    margin-bottom: 16px;
+    transition: color 0.2s ease;
+  }
+  .flavor-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    margin-bottom: 32px;
+  }
+  .flavor-tab {
+    flex: 1 1 0;
+    min-width: 0;
+    border: 1.5px solid rgba(255,255,255,0.22);
+    background: transparent;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--font-blackbird);
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+  .flavor-tab[data-flavor="original"]:not([aria-pressed="true"]):hover     { border-color: var(--gold);   color: var(--gold); }
+  .flavor-tab[data-flavor="twistedheat"]:not([aria-pressed="true"]):hover  { border-color: var(--red);    color: var(--red); }
+  .flavor-tab[data-flavor="pickle"]:not([aria-pressed="true"]):hover       { border-color: var(--green);  color: var(--green); }
+  .flavor-tab[data-flavor="alldressed"]:not([aria-pressed="true"]):hover   { border-color: var(--teal);   color: var(--teal); }
+  .flavor-tab[data-flavor="honeymustard"]:not([aria-pressed="true"]):hover { border-color: var(--yellow); color: var(--yellow); }
+  .flavor-tab[aria-pressed="true"] {
+    background: var(--flavor-accent);
+    color: #fff;
+    border-color: var(--flavor-accent);
+    cursor: default;
+  }
+  .flavor-detail h3 {
+    font-family: var(--font-baste);
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: clamp(40px, 5vw, 64px);
+    margin: 0 0 18px;
+    color: var(--flavor-accent);
+    transition: color 0.2s ease;
+  }
+  .flavor-desc {
+    font-size: 20px;
+    margin-bottom: 32px;
+    max-width: none;
+  }
+  .flavor-features {
+    list-style: none; padding: 0; margin: 28px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .flavor-feature {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--font-blackbird-regular);
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: #fff;
+  }
+  .flavor-feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: 1.5px solid var(--flavor-accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+    font-size: 14px;
+    color: var(--flavor-accent);
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  /* Tab icons hidden by default (desktop shows text labels).
+     Target both <i> AND <svg> since FA's kit replaces <i> with <svg> on load. */
+  .flavor-tab > i,
+  .flavor-tab > svg { display: none; }
+  /* Conditional line-break inside feature text. Visible on mobile only. */
+  .mobile-br { display: none; }
+  /* ----- Flavor explorer: mobile cleanup ----- */
+  @media (max-width: 767px) {
+    /* Cap the bag height so the entire section stays tight on mobile. */
+    .flavor-stage .bag-img {
+      width: auto;
+      max-height: 296px;
+      margin: 0 auto;
+    }
+    /* Hide the "Flavor Explorer" eyebrow. */
+    .flavor-detail .section-label { display: none; }
+    /* Center the entire right column and reorder so the tabs sit at the bottom. */
+    .flavor-detail {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .flavor-tabs { order: 99; }
+    /* Tabs become 56px square icon buttons, centered in a row. */
+    .flavor-tabs {
+      justify-content: center;
+      gap: 8px;
+      margin: 48px 0 0;
+    }
+    .flavor-tab {
+      flex: 0 0 auto;
+      width: 56px;
+      height: 56px;
+      padding: 0;
+      border-radius: 6px;
+    }
+    .flavor-tab > i,
+    .flavor-tab > svg {
+      display: inline-block;
+      font-size: 32px;
+      width: 32px;
+      height: 32px;
+    }
+    .flavor-tab-label { display: none; }
+    /* Flavor name + description: centered, smaller. */
+    .flavor-detail h3 { text-align: center; }
+    #flavor-desc.flavor-desc {
+      font-size: 16px !important;
+      text-align: center;
+      margin: 0 auto 24px;
+    }
+    /* Three bullets in a row, no icon circles, with flavor-color pipes
+       between each column. */
+    .flavor-features {
+      flex-direction: row;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 8px;
+    }
+    .flavor-feature {
+      position: relative;
+      flex: 0 1 100px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0;
+      font-size: 13px;
+      line-height: 1.2;
+    }
+    .flavor-feature-icon { display: none; }
+    .flavor-feature:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 10%;
+      bottom: 10%;
+      right: -9px;
+      width: 1px;
+      background: var(--flavor-accent);
+      transition: background 0.2s ease;
+    }
+    .mobile-br { display: inline; }
+  }
+
+  /* ----- For Buyers ----- */
+  #for-buyers {
+    background: var(--black-soft);
+    color: #fff;
+    text-align: center;
+  }
+  #for-buyers > .wrap > p:not(.section-label) {
+    margin: 0 auto 16px;
+    color: var(--muted-on-dark);
+    max-width: 56ch;
+    font-size: 20px;
+    font-family: var(--font-blackbird-regular);
+    font-weight: 400;
+  }
+  /* Mobile: 3 + 2 grid, second row centered (matches .stat-grid pattern).
+     Desktop (768+): all 5 on one row. */
+  .channel-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+    margin: 56px auto 0;
+    max-width: 520px;
+    justify-content: center;
+  }
+  .channel-grid > .channel { grid-column: span 2; }
+  .channel-grid > .channel:nth-child(4) { grid-column: 2 / span 2; }
+  .channel-grid > .channel:nth-child(5) { grid-column: 4 / span 2; }
+  @media (min-width: 768px) {
+    .channel-grid {
+      grid-template-columns: repeat(5, 1fr);
+      max-width: none;
+      gap: 24px;
+    }
+    .channel-grid > .channel,
+    .channel-grid > .channel:nth-child(4),
+    .channel-grid > .channel:nth-child(5) { grid-column: auto; }
+  }
+  .channel { text-align: center; }
+  .channel-icon {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 18px;
+    background: url("Art/in-use/SVG/badge-shape.svg") no-repeat center / 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--red);
+  }
+  .channel .label {
+    font-family: var(--font-blackbird);
+    font-size: 20px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  /* ----- Specs expand ----- */
+  .specs-expand {
+    margin: 64px auto 0;
+    max-width: 760px;
+    border: 1px solid var(--line-on-dark);
+    border-radius: 10px;
+    background: #2A2A2D;
+    overflow: hidden;
+  }
+  .specs-expand summary {
+    list-style: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 24px;
+    color: #fff;
+    text-align: left;
+    transition: background 0.15s ease;
+  }
+  .specs-expand summary:hover { background: rgba(255,255,255,0.04); }
+  .specs-expand[open] summary { border-bottom: 1px solid var(--line-on-dark); }
+  .specs-expand summary::-webkit-details-marker { display: none; }
+  .specs-expand summary::after {
+    content: '';
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D6242C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>") no-repeat center / contain;
+    transition: transform 0.3s ease;
+  }
+  /* Chevron rotates with intent rather than [open] state, so closing
+     animates the icon at the start of the close, not at the end. */
+  .specs-expand[open]:not(.is-closing) summary::after { transform: rotate(180deg); }
+  .specs-body { overflow: hidden; }
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    font-family: var(--font-blackbird-regular);
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+  }
+  .spec-table th, .spec-table td {
+    text-align: left;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--line-on-dark);
+    vertical-align: top;
+    font-family: var(--font-blackbird-regular);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .spec-table th {
+    /* width:1% + nowrap collapses the column to fit its longest label. */
+    width: 1%;
+    white-space: nowrap;
+    background: rgba(255,255,255,0.025);
+    color: rgba(255,255,255,0.78);
+  }
+  .spec-table td { color: #fff; }
+  .spec-table tr:last-child th,
+  .spec-table tr:last-child td { border-bottom: none; }
+  .tbd {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(232,185,44,0.15);
+    border: 1px solid var(--yellow);
+    color: var(--yellow);
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+
+  /* ----- Lead form (cream) ----- */
+  .form-section {
+    background: var(--cream);
+    color: var(--ink);
+    padding-top: clamp(48px, 6vw, 80px);
+    padding-bottom: clamp(48px, 6vw, 80px);
+    position: relative;
+    overflow: hidden;
+  }
+  /* Static decorative pretzel pile filling the bottom half of the form section.
+     Pretzels sit BEHIND a 75%-opacity cream wash so they ghost through the bg.
+     overflow: visible so pretzel tops can extend above the container without clipping;
+     the cream wash is extended upward to keep the wash consistent. */
+  .form-pretzels {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 35%;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 0;
+    isolation: isolate;
+  }
+  .form-pretzel {
+    position: absolute;
+    display: block;
+    height: auto;
+    user-select: none;
+  }
+  .form-pretzels::after {
+    content: '';
+    position: absolute;
+    top: -220px;
+    left: 0; right: 0; bottom: 0;
+    background: rgba(245, 241, 232, 0.75); /* var(--cream) @ 75% */
+    pointer-events: none;
+    z-index: 2;
+  }
+  .form-section h2 {
+    color: var(--ink);
+    white-space: nowrap;
+    font-size: clamp(32px, 4.6vw, 56px);
+  }
+  .form-grid {
+    display: grid;
+    gap: 40px;
+    margin-top: 24px;
+  }
+  @media (min-width: 900px) {
+    .form-grid {
+      grid-template-columns: 1fr 1fr;
+      column-gap: clamp(64px, 9vw, 120px);
+      align-items: start;
+    }
+  }
+  .form-card {
+    background: transparent;
+    padding: 0;
+  }
+  .form-col .form-card { margin-top: 28px; }
+  .form-intro {
+    max-width: 50ch;
+    color: var(--muted-on-light);
+    font-size: 20px;
+    font-family: var(--font-blackbird-regular);
+    font-weight: 400;
+  }
+  .field { display: block; margin-bottom: 14px; }
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .field input,
+  .field select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid rgba(14,14,16,0.18);
+    border-radius: var(--radius);
+    background: #fff;
+    font-family: var(--font-blackbird-regular);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ink);
+    min-height: 52px;
+    transition: border-color 0.15s ease;
+  }
+  .field select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 44px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230E0E10' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    background-size: 12px 8px;
+  }
+  /* Placeholder & empty-select treatment: uppercase, muted, slight tracking */
+  .field input::placeholder {
+    color: var(--muted-on-light);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+  .field select:invalid {
+    color: var(--muted-on-light);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+  .field select option {
+    color: var(--ink);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .field input:focus, .field select:focus {
+    outline: none;
+    border-color: var(--red);
+  }
+  .field .req { color: var(--red); margin-left: 4px; }
+  .form-meta {
+    font-size: 12px;
+    color: var(--muted-on-light);
+    letter-spacing: 0.04em;
+    margin: 0 0 22px;
+  }
+  .honeypot { position: absolute; left: -9999px; height: 0; width: 0; overflow: hidden; }
+
+  /* Invalid field state — set on submit when validation fails. */
+  .field input.is-invalid,
+  .field select.is-invalid {
+    border-color: var(--red);
+  }
+
+  /* Post-submit confirmation: hidden until the form-col is marked is-submitted. */
+  .form-col .form-success { display: none; }
+  .form-col.is-submitted > *:not(.form-success) { display: none; }
+  .form-col.is-submitted .form-success { display: block; }
+
+  /* One-shot pretzel cascade on submit — same layered/depth language as
+     the hero cascade (back blurred, mid soft, front sharp; varied sizes,
+     halves and crumbs sprinkled in). Each piece falls through and exits
+     past the viewport so nothing piles at the bottom. */
+  .submit-waterfall {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 90;
+  }
+  .waterfall-wrap {
+    position: absolute;
+    top: 0;
+    will-change: transform;
+  }
+  .waterfall-wrap.layer-back  { z-index: 1; }
+  .waterfall-wrap.layer-mid   { z-index: 3; }
+  .waterfall-wrap.layer-front { z-index: 7; }
+  .waterfall-inner {
+    filter: blur(var(--w-blur, 0));
+    transform-origin: center;
+    animation: waterfall-fall var(--w-dur, 2.5s) linear forwards;
+    animation-delay: var(--w-delay, 0s);
+  }
+  .waterfall-inner img {
+    display: block;
+    height: auto;
+    max-width: none;
+    user-select: none;
+  }
+  @keyframes waterfall-fall {
+    0%   { transform: translateY(-35vh) rotate(var(--w-rot-start, 0deg)); }
+    100% { transform: translateY(135vh) rotate(var(--w-rot-end, 360deg)); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .submit-waterfall { display: none; }
+  }
+  .form-success-icon {
+    font-size: clamp(64px, 7vw, 96px);
+    color: var(--red);
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+  .form-success h2 {
+    margin: 0 0 14px;
+  }
+  .form-success-msg {
+    font-family: var(--font-blackbird-regular);
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--muted-on-light);
+    max-width: 50ch;
+    margin: 0 0 28px;
+  }
+
+  /* Landscape sell sheet — a self-contained image (no bleed). */
+  .sales-sheet {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid rgba(14,14,16,0.1);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  }
+  /* Desktop: vertically center the (shorter) landscape sheet against the
+     taller form column instead of top-aligning it. */
+  @media (min-width: 900px) {
+    .form-aside { align-self: center; }
+  }
+
+  /* Mobile-only form-section adjustments:
+     - bigger headline
+     - doubled, symmetric section padding
+     - full-width submit button */
+  @media (max-width: 767px) {
+    .form-section {
+      padding-top: clamp(40px, 8vw, 80px);
+      padding-bottom: clamp(40px, 8vw, 80px);
+    }
+    .form-section .wrap {
+      padding-left: clamp(40px, 8vw, 80px);
+      padding-right: clamp(40px, 8vw, 80px);
+    }
+    .form-section h2 {
+      font-size: clamp(40px, 10vw, 56px);
+      white-space: normal;
+    }
+    .form-card .btn {
+      width: 100%;
+    }
+  }
+
+  /* ----- Visit ----- */
+  .visit {
+    background: #000;
+    color: #fff;
+    padding: clamp(64px, 9vw, 112px) 0;
+  }
+  .visit-grid { display: grid; gap: 40px; align-items: center; }
+  @media (min-width: 768px) { .visit-grid { grid-template-columns: 1.2fr 1fr; } }
+  .visit h2 {
+    font-family: var(--font-blackbird);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1;
+  }
+  .visit .lede {
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: clamp(20px, 2vw, 23px);
+    color: var(--muted-on-dark);
+    margin: 0 0 20px;
+  }
+  .visit .contact {
+    font-family: var(--font-blackbird-regular);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--muted-on-dark);
+    margin: 0 0 28px;
+  }
+  .visit a { color: #fff; }
+  .visit-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+  }
+  .visit .email-link {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--red);
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  .visit .email-link:hover { color: #fff; }
+  .sse-logo { display: block; width: 100%; max-width: 460px; height: auto; margin: 0 auto; }
+
+  /* Mobile-only Visit adjustments:
+     - SSE logo moves to top (via grid order) and shrinks to 60%
+     - all text content centers
+     - button stretches full-width */
+  @media (max-width: 767px) {
+    .visit-grid > div:last-child { order: -1; }
+    .sse-logo { max-width: 276px; }
+    .visit { text-align: center; }
+    .visit h2,
+    .visit p,
+    .visit .lede,
+    .visit .section-label {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .visit-actions { justify-content: center; }
+    .visit-actions .btn { width: 100%; }
+  }
+
+  /* ----- Footer ----- */
+  .site-footer {
+    background: #000;
+    color: var(--muted-on-dark);
+    padding: 32px 0;
+    font-family: var(--font-blackbird-regular);
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-top: 1px solid var(--line-on-dark);
+  }
+  .site-footer .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .site-footer nav a {
+    margin-left: 22px;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .site-footer nav a:hover { color: var(--red); }
+  @media (max-width: 767px) {
+    .site-footer .wrap {
+      justify-content: center;
+      text-align: center;
+    }
+    .site-footer nav a:first-child { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER / NAV
+     ============================================================ -->
+<header class="site-header" role="banner">
+  <div class="wrap">
+    <div class="header-left">
+      <a href="#" class="logo" aria-label="TWYSTS — home">
+        <svg viewBox="0 0 961 333.04" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <g fill="currentColor">
+            <path d="M485.22,40.87c7.63,20.61,15.26,41.2,22.88,61.81,1.39-4.47,2.81-8.96,4.19-13.43,3.55-11.64,6.21-20.39,7.98-26.22,1.67-5.52,4.29-13.88,7.85-25.1.31-.98-.62-1.93-1.9-1.91-12.24.2-24.47.32-36.71.37-2.97.01-5.12,2.25-4.29,4.48Z"/>
+            <path d="M39,273.06c0-12.93,0-32.15,0-57.64V56.97c-8.78-.84-15.36-1.49-19.75-1.93-4.39-.44-10.81-1.08-19.25-1.96V0c43.23,6.66,86.58,12.4,130,17.24,0,15.92,0,32.16,0,47.84-8.55-.65-14.97-1.17-19.24-1.51-4.28-.35-10.53-.86-18.76-1.55v151.31c0,25.35,0,44.14,0,56.37,0,12.23,0,30.72,0,55.47-17.68,2.19-35.35,4.53-53,7.03v-59.13Z"/>
+            <path d="M146.6,74.23c-.96-12.33-2.41-30.85-4.33-55.68,6.42.69,12.84,1.36,19.26,2.01,20.31,2.13,37.05,17.45,37.59,34.84,0,.19.01.37.02.56,1.28,25.17,2.41,50.4,3.37,75.73,1.77,39.92,3.54,79.71,5.31,119.37.32-.02.64-.03.96-.05,4.34-55.28,8.68-110.14,13.02-164.59.96-13.55,1.76-23.62,2.41-30.23.64-6.61,1.45-16.53,2.41-29.74,16.57,1.33,33.14,2.52,49.72,3.58,1.61,18.34,3.06,36.63,4.35,54.89,1.28,14.04,2.42,28.16,3.38,42.41,3.22,40.23,6.44,80.29,9.66,120.19.32-.01.64-.02.97-.03,1.93-39.4,3.86-78.69,5.8-117.9,1.28-23,2.42-45.83,3.38-68.52,0-.1.01-.2.02-.3,1.05-16.28,17.54-28.14,37.65-27.24,5.65.24,11.29.47,16.94.68-1.62,21.73-2.82,37.94-3.63,48.56-.81,10.63-2.02,26.59-3.62,47.89-2.9,38.38-5.8,76.86-8.7,115.44,0,2.32-.17,4.64-.48,6.97-.97,11.62-1.62,20.22-1.93,25.77-.32,5.56-.97,14.02-1.93,25.41-24.97,1.1-49.94,2.5-74.88,4.21-3.86-58.52-7.73-117.37-11.59-176.56-1.13,17.77-2.25,35.57-3.38,53.4-2.58,41.3-5.15,82.89-7.72,124.79-25.1,1.9-50.18,4.09-75.23,6.6-4.82-61.34-9.64-123.28-14.45-185.85-1.93-25.37-3.37-44.28-4.33-56.61Z"/>
+            <path d="M650.85,48.98c10.63,13.72,15.94,36.62,15.94,68.49-6.07.14-12.15.27-18.22.39-18.66.36-34.17-10.68-36.35-25.44,0-.06-.02-.13-.03-.19-.97-6.42-2.5-11.01-4.59-13.79-2.1-2.77-5.24-4.09-9.42-3.98-5.49.15-9.11,1.97-10.88,5.47-1.78,3.5-2.66,8.18-2.66,14.07,0,8.44,2.82,16.7,8.46,24.83,5.64,8.13,14.42,18.41,26.34,30.99,10.31,10.79,18.85,20.53,25.61,29.17,6.76,8.64,12.48,18.32,17.15,29.04,4.66,10.72,7.01,22.2,7,34.32,0,13.45-2.66,25.21-7.97,35.2-5.31,10-13.29,17.63-23.91,22.95-10.63,5.33-23.37,7.59-38.18,6.99-26.76-1.09-45.53-9.49-56.33-25.53-10.81-16.04-16.2-38.52-16.2-67.61,5.34.03,10.68.06,16.02.1,19.62.12,36.26,11.72,39.07,27.19.01.07.03.14.04.21,1.29,7.05,3.3,12.34,6.04,15.86,2.73,3.52,6.36,5.34,10.88,5.47,5.15.14,8.94-1.93,11.36-6.24,2.42-4.31,3.63-9.82,3.63-16.54,0-10.31-3.07-20-9.19-28.95-6.12-8.95-15.64-20.14-28.53-33.45-10.32-10.48-18.54-19.42-24.66-26.9-6.13-7.47-11.37-16-15.72-25.6-4.36-9.59-6.53-19.82-6.53-30.71,0-18.73,6.05-33.89,18.14-45.68,12.09-11.79,29.09-18.06,51.02-18.94,24.49-1,42.05,5.05,52.68,18.8Z"/>
+            <path d="M715,259.18c0-11.18,0-26.99,0-49.31V71.07c-8.77.46-15.35.78-19.74.99-4.39.21-10.81.51-19.26.89V30.03c43.39-2.78,86.73-6.46,130-11.06v46.87c-8.77.64-15.35,1.09-19.74,1.39-4.39.3-10.81.73-19.26,1.28v142.01c0,23.64,0,41.17,0,52.56,0,11.41,0,28.65,0,51.73-17.32-1.66-34.66-3.16-52-4.51v-51.14Z"/>
+            <path d="M933.28,23.9c10.55,15.84,15.82,43.52,15.82,82.37-6.03.34-12.06.68-18.09,1.01-18.52.93-33.93-11.73-36.1-29.08,0-.08-.02-.15-.03-.23-.96-7.57-2.49-12.94-4.56-16.11-2.08-3.16-5.21-4.54-9.37-4.16-5.45.5-9.06,2.85-10.81,7.04-1.76,4.19-2.64,9.72-2.64,16.6,0,9.87,2.8,19.4,8.41,28.76,5.6,9.38,14.33,21.26,26.18,36.1,10.24,12.73,18.72,24.44,25.44,34.89,6.71,10.45,12.39,22.27,17.02,35.41,4.63,13.14,6.95,27.23,6.95,42.01,0,16.4-2.63,30.63-7.91,42.45-5.27,11.82-13.19,20.5-23.74,26.07-10.56,5.58-23.2,7.18-37.93,5.19-26.59-3.62-45.28-15.07-56.03-34.17-10.76-19.14-16.13-44.81-16.13-77.72,5.48.2,10.96.41,16.44.62,19.43.67,35.61,14.72,38.37,32.87.01.08.03.17.04.25,1.28,8.29,3.28,14.57,6.01,18.85,2.72,4.27,6.32,6.64,10.81,7.05,5.12.47,8.89-1.75,11.29-6.74,2.4-4.98,3.6-11.47,3.6-19.44,0-12.25-3.05-23.87-9.13-34.61-6.09-10.74-15.54-24.13-28.36-39.69-10.26-12.26-18.44-22.51-24.53-31.02-6.1-8.5-11.31-18.14-15.64-28.93-4.33-10.79-6.5-22.28-6.5-34.6,0-21.21,6.02-38.73,18.05-53.2,12.03-14.44,28.95-23.27,50.73-26.22,24.34-3.31,41.77,2.45,52.32,18.36Z"/>
+            <path d="M472,232.72c0-11.48-1.7-22.92-5.06-34.1-10.89-36.16-21.78-72.33-32.67-108.65-2.9-11.9-5.08-20.84-6.53-26.8-.01-.06-.03-.12-.04-.18-3.82-15.67-21.26-27.26-41.56-27.86-6.85-.2-13.69-.42-20.54-.66,2.25,7.76,4.51,15.5,6.77,23.22,2.25,7.73,4.51,15.31,6.77,22.75.64,2.44,1.29,4.87,1.93,7.31,8.38,28.45,14.58,49.62,18.62,63.73,2.89,10.18,23.83,79.99,38.66,129.09,2.66,8.81,10.66,15.67,20.95,18.79,6.12,1.86,12.7-1.93,12.7-7.07,0-19.86,0-39.72,0-59.58Z"/>
+            <path d="M463.19,134.23c5.94,18.42,11.88,36.83,17.82,55.24,1.01-3.16,8.78-18.37,12.48-32.11,4.49-16.69,3.56-34.03-2.58-50.38-6.69-17.83-13.38-35.65-20.07-53.5-3.21,15.49-6.41,30.99-9.61,46.48-2.32,11.4-1.65,23.06,1.96,34.26Z"/>
+            <path d="M419,264.01c0,4.2,0,11.64,0,36.73l.99.98c6.47-.12,12.94-.21,19.41-.29,0,0-13.22-13.58-20.4-37.43Z"/>
+            <path d="M946,8.74h-2v-2h7v2h-2v13h-3v-13ZM952,6.74h2.71l1.79,5.71,1.84-5.71h2.67v15h-2v-10.05l-1.95,6.05h-.1l-1.95-6.05v10.05h-3V6.74Z"/>
+          </g>
+        </svg>
+      </a>
+      <span class="nav-divider" aria-hidden="true">|</span>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#why">Why TWYSTS</a></li>
+          <li><a href="#products">Lineup</a></li>
+          <li><a href="#flavors">Flavors</a></li>
+          <li><a href="#for-buyers">For Buyers</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-end">
+      <a class="booth-link" href="#visit">Sweets &amp; Snacks Expo Booth #4621</a>
+      <a class="btn nav-cta" href="#lead">Start Selling TWYSTS!</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================================================
+       1. HERO (lean — concept coming separately)
+       ============================================================ -->
+  <section class="hero grain" aria-labelledby="hero-h">
+    <div class="pretzel-cascade" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <svg class="hero-logo" viewBox="0 0 961.15 520.26" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TWYSTS Protein+">
+          <g fill="#fff">
+            <path d="M484.68,40.83c7.63,20.61,15.26,41.2,22.88,61.81,1.39-4.47,2.81-8.96,4.19-13.43,3.55-11.64,6.21-20.39,7.98-26.22,1.67-5.52,4.29-13.88,7.85-25.1.31-.98-.62-1.93-1.9-1.91-12.24.2-24.47.32-36.71.37-2.97.01-5.12,2.25-4.29,4.48Z"/>
+            <path d="M38.37,272.94c0-12.89,0-32.08,0-57.56V56.93c-8.64-.84-15.11-1.49-19.43-1.93-4.32-.44-10.63-1.08-18.94-1.96V0c43.13,6.64,86.37,12.37,129.7,17.2,0,15.88,0,31.76,0,47.64-8.66-.66-15.16-1.18-19.49-1.53-4.33-.35-10.67-.87-19-1.57v151.65c0,25.28,0,44.01,0,56.2,0,12.2,0,30.63,0,55.31-17.63,2.18-35.24,4.52-52.84,7.01v-58.95Z"/>
+            <path d="M146.06,74.19c-.96-12.33-2.41-30.85-4.33-55.68,6.42.69,12.84,1.36,19.26,2.01,20.31,2.13,37.05,17.45,37.59,34.84,0,.19.01.37.02.56,1.28,25.17,2.41,50.4,3.37,75.73,1.77,39.92,3.54,79.71,5.31,119.37.32-.02.64-.03.96-.05,4.34-55.28,8.68-110.14,13.02-164.59.96-13.55,1.76-23.62,2.41-30.23.64-6.61,1.45-16.53,2.41-29.74,16.57,1.33,33.14,2.52,49.72,3.58,1.61,18.34,3.06,36.63,4.35,54.89,1.28,14.04,2.42,28.16,3.38,42.41,3.22,40.23,6.44,80.29,9.66,120.19.32-.01.64-.02.97-.03,1.93-39.4,3.86-78.69,5.8-117.9,1.28-23,2.42-45.83,3.38-68.52,0-.1.01-.2.02-.3,1.05-16.28,17.54-28.14,37.65-27.24,5.65.24,11.29.47,16.94.68-1.62,21.73-2.82,37.94-3.63,48.56-.81,10.63-2.02,26.59-3.62,47.89-2.9,38.38-5.8,76.86-8.7,115.44,0,2.32-.17,4.64-.48,6.97-.97,11.62-1.62,20.22-1.93,25.77-.32,5.56-.97,14.02-1.93,25.41-24.97,1.1-49.94,2.5-74.88,4.21-3.86-58.52-7.73-117.37-11.59-176.56-1.13,17.77-2.25,35.57-3.38,53.4-2.58,41.3-5.15,82.89-7.72,124.79-25.1,1.9-50.18,4.09-75.23,6.6-4.82-61.34-9.64-123.28-14.45-185.85-1.93-25.37-3.37-44.28-4.33-56.61Z"/>
+            <path d="M650.31,48.94c10.63,13.72,15.94,36.62,15.94,68.49-6.07.14-12.15.27-18.22.39-18.66.36-34.17-10.68-36.35-25.44,0-.06-.02-.13-.03-.19-.97-6.42-2.5-11.01-4.59-13.79-2.1-2.77-5.24-4.09-9.42-3.98-5.49.15-9.11,1.97-10.88,5.47-1.78,3.5-2.66,8.18-2.66,14.07,0,8.44,2.82,16.7,8.46,24.83,5.64,8.13,14.42,18.41,26.34,30.99,10.31,10.79,18.85,20.53,25.61,29.17,6.76,8.64,12.48,18.32,17.15,29.04,4.66,10.72,7.01,22.2,7,34.32,0,13.45-2.66,25.21-7.97,35.2-5.31,10-13.29,17.63-23.91,22.95-10.63,5.33-23.37,7.59-38.18,6.99-26.76-1.09-45.53-9.49-56.33-25.53-10.81-16.04-16.2-38.52-16.2-67.61,5.34.03,10.68.06,16.02.1,19.62.12,36.26,11.72,39.07,27.19.01.07.03.14.04.21,1.29,7.05,3.3,12.34,6.04,15.86,2.73,3.52,6.36,5.34,10.88,5.47,5.15.14,8.94-1.93,11.36-6.24,2.42-4.31,3.63-9.82,3.63-16.54,0-10.31-3.07-20-9.19-28.95-6.12-8.95-15.64-20.14-28.53-33.45-10.32-10.48-18.54-19.42-24.66-26.9-6.13-7.47-11.37-16-15.72-25.6-4.36-9.59-6.53-19.82-6.53-30.71,0-18.73,6.05-33.89,18.14-45.68,12.09-11.79,29.09-18.06,51.02-18.94,24.49-1,42.05,5.05,52.68,18.8Z"/>
+            <path d="M713.85,259.14c0-11.18,0-27.83,0-49.93V71.75c-8.69.46-15.2.77-19.55.98-4.34.21-10.7.51-19.07.88V29.99c43.46-2.78,86.88-6.48,130.23-11.08v47.1c-8.67.63-15.17,1.08-19.51,1.38-4.34.3-10.68.73-19.03,1.26v141.84c0,23.64,0,41.17,0,52.56,0,11.41,0,28.65,0,51.73-17.68-1.66-35.36-3.16-53.06-4.51v-51.14Z"/>
+            <path d="M932.74,23.86c10.55,15.84,15.82,43.52,15.82,82.37-6.03.34-12.06.68-18.09,1.01-18.52.93-33.93-11.73-36.1-29.08,0-.08-.02-.15-.03-.23-.96-7.57-2.49-12.94-4.56-16.11-2.08-3.16-5.21-4.54-9.37-4.16-5.45.5-9.06,2.85-10.81,7.04-1.76,4.19-2.64,9.72-2.64,16.6,0,9.87,2.8,19.4,8.41,28.76,5.6,9.38,14.33,21.26,26.18,36.1,10.24,12.73,18.72,24.44,25.44,34.89,6.71,10.45,12.39,22.27,17.02,35.41,4.63,13.14,6.95,27.23,6.95,42.01,0,16.4-2.63,30.63-7.91,42.45-5.27,11.82-13.19,20.5-23.74,26.07-10.56,5.58-23.2,7.18-37.93,5.19-26.59-3.62-45.28-15.07-56.03-34.17-10.76-19.14-16.13-44.81-16.13-77.72,5.48.2,10.96.41,16.44.62,19.43.67,35.61,14.72,38.37,32.87.01.08.03.17.04.25,1.28,8.29,3.28,14.57,6.01,18.85,2.72,4.27,6.32,6.64,10.81,7.05,5.12.47,8.89-1.75,11.29-6.74,2.4-4.98,3.6-11.47,3.6-19.44,0-12.25-3.05-23.87-9.13-34.61-6.09-10.74-15.54-24.13-28.36-39.69-10.26-12.26-18.44-22.51-24.53-31.02-6.1-8.5-11.31-18.14-15.64-28.93-4.33-10.79-6.5-22.28-6.5-34.6,0-21.21,6.02-38.73,18.05-53.2,12.03-14.44,28.95-23.27,50.73-26.22,24.34-3.31,41.77,2.45,52.32,18.36Z"/>
+            <path d="M471.61,232.68c0-11.48-1.7-22.92-5.06-34.1-10.89-36.16-21.78-72.33-32.67-108.65-2.9-11.9-5.08-20.84-6.53-26.8-.01-.06-.03-.12-.04-.18-3.82-15.67-21.26-27.26-41.56-27.86-6.85-.2-13.69-.42-20.54-.66,2.25,7.76,4.51,15.5,6.77,23.22,2.25,7.73,4.51,15.31,6.77,22.75.64,2.44,1.29,4.87,1.93,7.31,8.38,28.45,14.58,49.62,18.62,63.73,2.89,10.18,23.83,79.99,38.66,129.09,2.66,8.81,10.66,15.67,20.95,18.79,6.12,1.86,12.7-1.93,12.7-7.07,0-19.86,0-39.72,0-59.58Z"/>
+            <path d="M462.65,134.19c5.94,18.42,11.88,36.83,17.82,55.24,1.01-3.16,8.78-18.37,12.48-32.11,4.49-16.69,3.56-34.03-2.58-50.38-6.69-17.83-13.38-35.65-20.07-53.5-3.21,15.49-6.41,30.99-9.61,46.48-2.32,11.4-1.65,23.06,1.96,34.26Z"/>
+            <path d="M418.4,263.97c0,4.2,0,11.64,0,36.74v.99c6.8-.12,13.6-.23,20.4-.31,0,0-13.22-13.58-20.4-37.43Z"/>
+            <path d="M945.49,9.16h-2.01v-2.49h6.66v2.49h-2.06v12.6h-2.59v-12.6ZM951.76,6.67h2.82l1.87,5.75,1.91-5.75h2.78v15.09h-2.49v-10.11l-2.15,6.51h-.1l-2.11-6.51v10.11h-2.54V6.67Z"/>
+          </g>
+          <rect fill="#e31f26" x="71.26" y="368.49" width="812.91" height="151.77" rx="25.79" ry="25.79"/>
+          <g fill="#fff">
+            <path d="M191.47,398.84h-76.84v91.85h38.36v-21.3h38.49c3.76,0,6.86-1.41,9.3-4.23,2.44-2.82,3.66-6.33,3.66-10.52v-41.05c0-4.28-1.22-7.8-3.66-10.58-2.44-2.78-5.54-4.17-9.3-4.17ZM165.62,444.51c-.98,2.4-2.67,3.59-5.07,3.59h-7.57v-27.96h7.57c2.48,0,4.19,1.2,5.13,3.59.94,2.4,1.41,5.86,1.41,10.39s-.49,8-1.48,10.39Z"/>
+            <path d="M299.54,459.39c2.44-2.82,3.66-6.33,3.66-10.52v-35.28c0-4.28-1.22-7.8-3.66-10.58-2.44-2.78-5.54-4.17-9.3-4.17h-78.25v91.85h37.97v-27.07h5l9.24,27.07h39.9l-10.39-27.53c2.25-.62,4.2-1.87,5.84-3.77ZM249.96,419.49h8.85c2.22,0,3.76,1.07,4.62,3.21.85,2.14,1.28,4.96,1.28,8.47,0,3.68-.43,6.56-1.28,8.66-.86,2.1-2.4,3.14-4.62,3.14h-8.85v-23.47Z"/>
+            <path d="M389.79,398.84h-66.58c-3.77,0-6.86,1.39-9.3,4.17-2.44,2.78-3.66,6.31-3.66,10.58v62.34c0,4.19,1.22,7.7,3.66,10.52,2.44,2.82,5.54,4.23,9.3,4.23h66.58c3.76,0,6.86-1.41,9.3-4.23,2.44-2.82,3.66-6.33,3.66-10.52v-62.34c0-4.28-1.22-7.8-3.66-10.58-2.44-2.78-5.54-4.17-9.3-4.17ZM364.26,463.36c0,2.4-.69,4.09-2.05,5.07-1.37.98-3.25,1.48-5.65,1.48s-4.32-.52-5.77-1.54c-1.46-1.03-2.18-2.74-2.18-5.13v-37.08c0-2.39.68-4.08,2.05-5.07,1.37-.98,3.25-1.48,5.64-1.48s4.43.52,5.84,1.54c1.41,1.03,2.12,2.74,2.12,5.13v37.07Z"/>
+            <polygon points="407.62 425.26 429.3 425.26 429.3 490.69 468.04 490.69 468.04 425.26 489.72 425.26 489.72 398.84 407.62 398.84 407.62 425.26"/>
+            <polygon points="495.36 490.69 574.65 490.69 574.65 468.49 533.47 468.49 533.47 454 569.26 454 569.26 433.09 533.47 433.09 533.47 421.03 574.65 421.03 574.65 398.84 495.36 398.84 495.36 490.69"/>
+            <rect x="582.21" y="398.84" width="38.74" height="91.85"/>
+            <polygon points="690.61 415.38 690.61 428.34 689.97 428.34 679.84 416.15 665.47 398.84 630.19 398.84 630.19 490.69 659.82 490.69 659.82 473.11 659.82 456.69 660.46 456.69 671.5 470.55 687.66 490.69 720.37 490.69 720.37 398.84 690.61 398.84 690.61 415.38"/>
+            <path d="M779.58,414.03v13.26c0,5.14,1.54,10.06,4.29,13.69l25.53,33.73v-13.26c0-5.14-1.54-10.06-4.29-13.69l-25.53-33.73Z"/>
+            <polygon points="779.58 490.69 808.43 490.69 779.58 452.58 779.58 490.69"/>
+            <polygon points="809.41 436.17 809.41 398.06 780.56 398.06 809.41 436.17"/>
+            <path d="M828.66,429.95c-6.6,0-11.95,5.35-11.95,11.95v16.89h24.1v-28.85h-12.15Z"/>
+            <path d="M747.98,458.8h12.15c6.6,0,11.95-5.35,11.95-11.95v-16.89h-24.1v28.85Z"/>
+          </g>
+        </svg>
+        <h1 id="hero-h">Fuel Up + Flavor On.</h1>
+        <p class="lede">Bold seasoned pretzels with a serious crunch and 6g of protein per serving. Made for snackers who refuse to choose between flavor and function.</p>
+        <div class="hero-badges" aria-label="Product credentials">
+          <div class="hero-badge">Made in USA</div>
+          <div class="hero-badge">Non-GMO</div>
+          <div class="hero-badge">6g Protein</div>
+          <div class="hero-badge">Zero<br>Trans Fat</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. BOOTH STRIP
+       ============================================================ -->
+  <aside class="booth-strip" id="booth" aria-label="Tradeshow booth callout">
+    <div class="wrap">
+      <span>Sweets &amp; Snacks Expo</span>
+      <span>May 19–21, 2026</span>
+      <span>Booth #4621</span>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       3. WHY TWYSTS
+       ============================================================ -->
+  <section id="why" class="why grain" aria-labelledby="why-h">
+    <div class="wrap">
+      <p class="section-label">Why TWYSTS</p>
+      <h2 id="why-h"><span>More protein.</span> <span>Bigger flavor.</span></h2>
+      <p class="why-intro"><span>Same crunch buyers expect from the set.</span> <span>Cleaner ingredient panel.</span> <span>6g of protein per serving.</span></p>
+
+      <div class="pretzel-snap" aria-hidden="true">
+        <img class="snap-whole" src="Art/in-use/Packaging/Twysts-Original-Whole.webp" alt="" decoding="async" loading="lazy">
+        <img class="snap-half snap-left"  src="Art/in-use/Packaging/Original-Half1.webp" alt="" decoding="async" loading="lazy">
+        <img class="snap-half snap-right" src="Art/in-use/Packaging/Original-Half2.webp" alt="" decoding="async" loading="lazy">
+        <div class="snap-burst"></div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat"><span class="num">6g</span><span class="label">Protein per serving</span></div>
+        <div class="stat"><span class="num">Zero</span><span class="label">Trans Fat</span></div>
+        <div class="stat"><span class="num">Whey</span><span class="label">Protein powered</span></div>
+        <div class="stat"><span class="num">Non&#8209;GMO</span><span class="label">Ingredients</span></div>
+        <div class="stat"><span class="num">USA</span><span class="label">Made</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. LINEUP + FLAVOR EXPLORER
+       ============================================================ -->
+  <section id="products" class="lineup grain" aria-labelledby="prod-h">
+    <div class="wrap">
+      <p class="section-label">The Lineup</p>
+      <h2 id="prod-h">Five crave-worthy recipes.</h2>
+      <p class="lineup-intro"><span>Five flavors that hit every craving,</span> <span>in two snack-anywhere sizes.</span></p>
+
+      <div class="product-row">
+        <div class="product-card original">
+          <img class="bag-img" src="Art/in-use/Packaging/Twyst_Protein_Original_5oz.webp" alt="Original Recipe 5oz pack" loading="lazy">
+          <h4>Original Recipe</h4>
+          <p class="meta">Savory · classic crunch</p>
+        </div>
+        <div class="product-card twistedheat">
+          <img class="bag-img" src="Art/in-use/Packaging/Twyst_Protein_TwistedHeat_5oz.webp" alt="Twisted Heat 5oz pack" loading="lazy">
+          <h4>Twisted Heat</h4>
+          <p class="meta">Bold · fiery</p>
+        </div>
+        <div class="product-card pickle">
+          <img class="bag-img" src="Art/in-use/Packaging/Twyst_Protein_DillPickle_5oz.webp" alt="Dill Pickle 5oz pack" loading="lazy">
+          <h4>Dill Pickle</h4>
+          <p class="meta">Bright · tangy</p>
+        </div>
+        <div class="product-card alldressed">
+          <img class="bag-img" src="Art/in-use/Packaging/Twyst_Protein_AllDressed_5oz.webp" alt="All Dressed 5oz pack" loading="lazy">
+          <h4>All Dressed</h4>
+          <p class="meta">Everything · all at once</p>
+        </div>
+        <div class="product-card honeymustard">
+          <img class="bag-img" src="Art/in-use/Packaging/Twyst_Protein_HoneyMustard_5oz.webp" alt="Honey Mustard 5oz pack" loading="lazy">
+          <h4>Honey Mustard</h4>
+          <p class="meta">Sweet · sharp</p>
+        </div>
+      </div>
+
+      <div id="flavors" class="flavor-explorer" aria-label="Flavor explorer">
+        <div class="flavor-stage">
+          <img id="flavor-bag" class="bag-img" src="Art/in-use/Packaging/Twyst_Protein_Original_5oz.webp" alt="Original Recipe 5oz pack">
+        </div>
+        <div class="flavor-detail">
+          <p class="section-label">Flavor Explorer</p>
+          <div class="flavor-tabs" role="tablist" aria-label="Flavor selector">
+            <button class="flavor-tab" role="tab" type="button" aria-pressed="true"  data-flavor="original" aria-label="Original Recipe"><i class="fa-solid fa-pretzel" aria-hidden="true"></i><span class="flavor-tab-label">Original</span></button>
+            <button class="flavor-tab" role="tab" type="button" aria-pressed="false" data-flavor="twistedheat" aria-label="Twisted Heat"><i class="fa-solid fa-pepper-hot" aria-hidden="true"></i><span class="flavor-tab-label">Twisted Heat</span></button>
+            <button class="flavor-tab" role="tab" type="button" aria-pressed="false" data-flavor="pickle" aria-label="Dill Pickle"><i class="fa-solid fa-cucumber" aria-hidden="true"></i><span class="flavor-tab-label">Dill Pickle</span></button>
+            <button class="flavor-tab" role="tab" type="button" aria-pressed="false" data-flavor="alldressed" aria-label="All Dressed"><i class="fa-solid fa-onion" aria-hidden="true"></i><span class="flavor-tab-label">All Dressed</span></button>
+            <button class="flavor-tab" role="tab" type="button" aria-pressed="false" data-flavor="honeymustard" aria-label="Honey Mustard"><i class="fa-solid fa-honey-pot" aria-hidden="true"></i><span class="flavor-tab-label">Honey Mustard</span></button>
+          </div>
+          <h3 id="flavor-name">Original Recipe</h3>
+          <p id="flavor-desc" class="flavor-desc">Crunchier take on a timeless favorite. Classic Original Recipe delivers pure, savory crunch in every twist – nothing extra, just everything you want.</p>
+          <ul class="flavor-features">
+            <li class="flavor-feature"><span class="flavor-feature-icon" aria-hidden="true"><i class="fa-solid fa-dumbbell"></i></span><span>6g protein<br class="mobile-br"> per serving</span></li>
+            <li class="flavor-feature"><span class="flavor-feature-icon" aria-hidden="true"><i class="fa-solid fa-cubes-stacked"></i></span><span><span id="flavor-sugar">0g</span> added<br class="mobile-br"> sugar</span></li>
+            <li class="flavor-feature"><span class="flavor-feature-icon" aria-hidden="true"><i class="fa-solid fa-bag-shopping"></i></span><span>Available in<br class="mobile-br"> 5oz &amp; 16oz</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. FOR BUYERS
+       ============================================================ -->
+  <section id="for-buyers" class="grain" aria-labelledby="fb-h">
+    <div class="wrap">
+      <p class="section-label">For Buyers</p>
+      <h2 id="fb-h">Get TWYSTS on your shelf.</h2>
+      <p>Built for grocery, mass, club, c-store, and e-com.</p>
+
+      <div class="channel-grid">
+        <div class="channel"><div class="channel-icon"><i class="fa-solid fa-basket-shopping" aria-hidden="true"></i></div><span class="label">Grocery</span></div>
+        <div class="channel"><div class="channel-icon"><i class="fa-solid fa-store" aria-hidden="true"></i></div><span class="label">Mass</span></div>
+        <div class="channel"><div class="channel-icon"><i class="fa-solid fa-warehouse" aria-hidden="true"></i></div><span class="label">Club</span></div>
+        <div class="channel"><div class="channel-icon"><i class="fa-solid fa-gas-pump" aria-hidden="true"></i></div><span class="label">Convenience</span></div>
+        <div class="channel"><div class="channel-icon"><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i></div><span class="label">eCommerce</span></div>
+      </div>
+
+      <details class="specs-expand">
+        <summary>Specs &amp; Logistics for Buyers</summary>
+        <div class="specs-body">
+        <table class="spec-table">
+          <tbody>
+            <tr><th scope="row">Bag sizes</th><td>5 oz · 16 oz</td></tr>
+            <tr><th scope="row">Flavors</th><td>Original Recipe · Twisted Heat · Dill Pickle · All Dressed · Honey Mustard</td></tr>
+            <tr><th scope="row">Case pack, 5oz</th><td>12 bags per case</td></tr>
+            <tr><th scope="row">Case pack, 16oz</th><td>12 bags in a Display Ready Case</td></tr>
+            <tr><th scope="row">Shelf life</th><td>9 months from date of manufacture</td></tr>
+            <tr><th scope="row">Country of origin</th><td>Made in the USA</td></tr>
+            <tr><th scope="row">Manufacturer</th><td>The Pretzel Group, Inc.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. LEAD CAPTURE
+       ============================================================ -->
+  <section id="lead" class="form-section" aria-labelledby="lead-h">
+    <div class="form-pretzels" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="form-grid">
+        <div class="form-col">
+          <p class="section-label">Start Selling TWYSTS</p>
+          <h2 id="lead-h">Talk to our team.</h2>
+          <p class="form-intro">Drop your details. We'll send the sales sheet and book time at the booth.</p>
+          <form class="form-card" novalidate>
+            <div class="field">
+              <label for="f-name" class="sr-only">Name</label>
+              <input id="f-name" name="name" type="text" placeholder="Name *" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="f-company" class="sr-only">Company</label>
+              <input id="f-company" name="company" type="text" placeholder="Company *" required autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="f-email" class="sr-only">Work email</label>
+              <input id="f-email" name="email" type="email" placeholder="Work email *" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="f-role" class="sr-only">Role</label>
+              <select id="f-role" name="role" required>
+                <option value="">Role *</option>
+                <option>Buyer</option>
+                <option>Category Manager</option>
+                <option>Broker</option>
+                <option>Distributor</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="honeypot" aria-hidden="true">
+              <label for="f-website">Website</label>
+              <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+          </form>
+
+          <div class="form-success" role="status" aria-live="polite">
+            <div class="form-success-icon" aria-hidden="true">
+              <i class="fa-light fa-circle-check"></i>
+            </div>
+            <p class="section-label">Message Received</p>
+            <h2>We've got it.</h2>
+            <p class="form-success-msg">A team member will reach out shortly to chat and set up a time to meet you at Booth #4621.</p>
+            <a class="btn" href="Art/in-use/twysts-sellsheet.pdf" download="TWYSTS-Protein-Plus-Sell-Sheet.pdf">Download the sales sheet now</a>
+          </div>
+        </div>
+
+        <aside class="form-aside">
+          <img class="sales-sheet" src="Art/in-use/twysts-sellsheet.webp"
+               alt="TWYSTS Protein+ sell sheet" loading="lazy">
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. VISIT
+       ============================================================ -->
+  <section id="visit" class="visit" aria-labelledby="visit-h">
+    <div class="wrap visit-grid">
+      <div>
+        <p class="section-label">Come See Us</p>
+        <h2 id="visit-h">Sweets &amp; Snacks Expo<br>Booth #4621</h2>
+        <p class="lede">May 19–21, 2026 · McCormick Place, Chicago</p>
+        <div class="visit-actions">
+          <a class="btn" href="mailto:info@thepretzelgroup.com?subject=Booking%20a%20meeting%20at%20Booth%20%234621&amp;body=Hi%20TWYSTS%20team%2C%0A%0AI%27d%20like%20to%20find%20a%20time%20to%20meet%20at%20the%20Sweets%20%26%20Snacks%20Expo%20(Booth%20%234621%2C%20May%2019-21).%0A%0AA%20bit%20about%20me%3A%0A-%20Name%3A%20%0A-%20Company%3A%20%0A-%20Role%3A%20%0A%0APreferred%20times%3A%0A%0A%0AThanks%2C">Book a Meeting</a>
+        </div>
+      </div>
+      <div>
+        <img class="sse-logo"
+             src="Art/in-use/Packaging/logo-sse2026.webp"
+             alt="Sweets & Snacks Expo logo">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <span>Made in the USA · ©2026 The Pretzel Group, Inc.</span>
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  /* ---------- Lead form: validate + show confirmation state ---------- */
+  (function () {
+    const form = document.querySelector('.form-card');
+    if (!form) return;
+    const col = form.closest('.form-col');
+    if (!col) return;
+
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function isValid(field) {
+      const val = (field.value || '').trim();
+      if (field.required && !val) return false;
+      if (field.type === 'email' && !EMAIL_RE.test(val)) return false;
+      return true;
+    }
+
+
+    /* Strip the invalid state as the user corrects each field. */
+    form.querySelectorAll('input, select').forEach(f => {
+      f.addEventListener('input',  () => f.classList.remove('is-invalid'));
+      f.addEventListener('change', () => f.classList.remove('is-invalid'));
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      /* Honeypot — silently drop bot submissions. */
+      const honeypot = form.querySelector('[name="website"]');
+      if (honeypot && honeypot.value) return;
+
+      const fields = form.querySelectorAll('input[required], select[required]');
+      let firstInvalid = null;
+      fields.forEach(f => {
+        const ok = isValid(f);
+        f.classList.toggle('is-invalid', !ok);
+        if (!ok && !firstInvalid) firstInvalid = f;
+      });
+
+      if (firstInvalid) {
+        firstInvalid.focus();
+        return;
+      }
+
+      const data = Object.fromEntries(new FormData(form).entries());
+      delete data.website;
+      console.log('Lead form submission:', data);
+
+      /* Web3Forms AJAX submission. The access key is public by design —
+         it's tied to the destination inbox, not a secret. Spam is handled
+         by the client-side honeypot above + Web3Forms server-side filtering.
+         Static-host friendly (no server function). See DEPLOY-NOTES.md. */
+      const payload = {
+        access_key: '7c04f440-4fe3-4531-b394-2a2349801c7e',
+        subject: 'TWYSTS lead: ' + (data.name || 'Unknown') + ' from ' + (data.company || 'Unknown'),
+        from_name: 'TWYSTS Protein+ Landing Page',
+        replyto: data.email || '',
+        ...data
+      };
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+        .then(res => res.json())
+        .then(result => {
+          if (!result.success) throw new Error(result.message || 'Submission failed');
+          console.log('Form submission delivered:', result);
+        })
+        .catch(err => console.error('Form submission failed:', err));
+
+      /* Lock the col to its current height so the success state doesn't
+         cause a vertical layout shift when it replaces the form. */
+      const lockedHeight = col.getBoundingClientRect().height;
+      col.style.minHeight = lockedHeight + 'px';
+
+      col.classList.add('is-submitted');
+      spawnWaterfall();
+      col.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    function spawnWaterfall() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      const FLAVORS = ['Original','TwystedHeat','Pickle','AllDressed','HoneyMustard'];
+      const HALVES  = [
+        'Original-Half1.webp','Original-Half2.webp',
+        'TwystedHeat-Half1.webp','TwystedHeat-Half2.webp',
+        'Pickle-Half1.webp','Pickle-Half2.webp',
+        'alldressed-half1.webp','alldressed-half2.webp',
+        'honeymustard-half1.webp','honeymustard-half2.webp'
+      ];
+      const CRUMBS = ['crumb1.webp','crumb2.webp','crumb3.webp','crumb4.webp','crumb5.webp','crumb6.webp'];
+
+      const isMobile = window.matchMedia('(max-width: 767px)').matches;
+      const layers = ['back','mid','front'];
+
+      /* Same depth language as the hero cascade — back layers small/blurred/slow,
+         front layers large/sharp/fast — but tuned for a one-shot burst. */
+      const wholeCfg = {
+        back:  { sizeMin: 60,  sizeMax: 100, blurMin: 1.4, blurMax: 2.4, durMin: 4.0, durMax: 5.5 },
+        mid:   { sizeMin: 90,  sizeMax: 140, blurMin: 0.2, blurMax: 0.9, durMin: 3.0, durMax: 4.0 },
+        front: { sizeMin: 120, sizeMax: 180, blurMin: 0,   blurMax: 0,   durMin: 2.0, durMax: 3.0 }
+      };
+      const halfCfg = {
+        back:  { sizeMin: 40, sizeMax: 70,  blurMin: 1.2, blurMax: 2.0, durMin: 3.5, durMax: 4.8 },
+        mid:   { sizeMin: 60, sizeMax: 100, blurMin: 0.2, blurMax: 0.8, durMin: 2.6, durMax: 3.6 },
+        front: { sizeMin: 80, sizeMax: 130, blurMin: 0,   blurMax: 0,   durMin: 1.8, durMax: 2.6 }
+      };
+      const crumbCfg = {
+        back:  { sizeMin: 2, sizeMax: 5, blurMin: 0.8, blurMax: 1.4, durMin: 3.2, durMax: 4.5 },
+        mid:   { sizeMin: 3, sizeMax: 7, blurMin: 0.2, blurMax: 0.6, durMin: 2.5, durMax: 3.4 },
+        front: { sizeMin: 4, sizeMax: 9, blurMin: 0,   blurMax: 0.2, durMin: 1.8, durMax: 2.5 }
+      };
+
+      const wholeCount  = isMobile ? 18 : 36;
+      const halfCount   = isMobile ? 4  : 10;
+      const crumbCount  = isMobile ? 18 : 38;
+
+      const rand = (a, b) => Math.random() * (b - a) + a;
+      const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+
+      const wrap = document.createElement('div');
+      wrap.className = 'submit-waterfall';
+      wrap.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(wrap);
+
+      let remaining = 0;
+      const cleanup = () => {
+        remaining -= 1;
+        if (remaining <= 0 && wrap.parentNode) wrap.remove();
+      };
+
+      function spawn(src, configSet) {
+        const layer = pick(layers);
+        const c = configSet[layer];
+
+        const wrapDiv = document.createElement('div');
+        wrapDiv.className = 'waterfall-wrap layer-' + layer;
+        wrapDiv.style.left = rand(-3, 100).toFixed(1) + '%';
+
+        const inner = document.createElement('div');
+        inner.className = 'waterfall-inner';
+        const dur     = rand(c.durMin, c.durMax);
+        const rotStart = rand(-180, 180);
+        const rotEnd   = rotStart + rand(180, 720) * (Math.random() < 0.5 ? -1 : 1);
+        inner.style.setProperty('--w-rot-start', rotStart.toFixed(0) + 'deg');
+        inner.style.setProperty('--w-rot-end',   rotEnd.toFixed(0)   + 'deg');
+        inner.style.setProperty('--w-blur',      rand(c.blurMin, c.blurMax).toFixed(2) + 'px');
+        inner.style.setProperty('--w-dur',       dur.toFixed(2) + 's');
+        inner.style.setProperty('--w-delay',     rand(0, 0.7).toFixed(2) + 's');
+
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = '';
+        img.decoding = 'async';
+        img.style.width = rand(c.sizeMin, c.sizeMax).toFixed(0) + 'px';
+
+        inner.appendChild(img);
+        wrapDiv.appendChild(inner);
+        wrap.appendChild(wrapDiv);
+
+        remaining += 1;
+        inner.addEventListener('animationend', cleanup, { once: true });
+      }
+
+      for (let i = 0; i < wholeCount; i++) spawn('Art/in-use/Packaging/Twysts-' + pick(FLAVORS) + '-Whole.webp', wholeCfg);
+      for (let i = 0; i < halfCount;  i++) spawn('Art/in-use/Packaging/' + pick(HALVES), halfCfg);
+      for (let i = 0; i < crumbCount; i++) spawn('Art/in-use/Packaging/' + pick(CRUMBS), crumbCfg);
+
+      /* Safety net in case any animationend fails to fire. */
+      setTimeout(() => { if (wrap.parentNode) wrap.remove(); }, 8000);
+    }
+  })();
+
+  /* ---------- Specs <details> animated open/close ---------- */
+  (function () {
+    const details = document.querySelector('.specs-expand');
+    if (!details) return;
+    const summary = details.querySelector('summary');
+    const body    = details.querySelector('.specs-body');
+    if (!summary || !body) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const DURATION = 350;
+    let animating = false;
+
+    summary.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (animating) return;
+
+      if (details.open) {
+        animating = true;
+        details.classList.add('is-closing');
+        const h = body.scrollHeight;
+        body.style.height = h + 'px';
+        body.offsetHeight; /* reflow */
+        body.style.transition = 'height ' + DURATION + 'ms ease';
+        requestAnimationFrame(() => { body.style.height = '0px'; });
+        body.addEventListener('transitionend', function onEnd(ev) {
+          if (ev.propertyName !== 'height') return;
+          body.removeEventListener('transitionend', onEnd);
+          details.open = false;
+          details.classList.remove('is-closing');
+          body.style.height = '';
+          body.style.transition = '';
+          animating = false;
+        });
+      } else {
+        animating = true;
+        details.open = true;
+        const h = body.scrollHeight;
+        body.style.height = '0px';
+        body.offsetHeight; /* reflow */
+        body.style.transition = 'height ' + DURATION + 'ms ease';
+        requestAnimationFrame(() => { body.style.height = h + 'px'; });
+        body.addEventListener('transitionend', function onEnd(ev) {
+          if (ev.propertyName !== 'height') return;
+          body.removeEventListener('transitionend', onEnd);
+          body.style.height = '';
+          body.style.transition = '';
+          animating = false;
+        });
+      }
+    });
+  })();
+
+  /* ---------- Lineup drop-in (staggered) ---------- */
+  (function () {
+    const row = document.querySelector('.product-row');
+    if (!row) return;
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) { row.classList.add('is-entered'); return; }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        row.classList.add('is-entered');
+        io.disconnect();
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -8% 0px' });
+    io.observe(row);
+  })();
+
+  /* ---------- Why-section pretzel snap (scroll-bound) ---------- */
+  (function () {
+    const snap = document.querySelector('.pretzel-snap');
+    if (!snap) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const burst = snap.querySelector('.snap-burst');
+    const CRUMBS = ['crumb1.webp','crumb2.webp','crumb3.webp','crumb4.webp','crumb5.webp','crumb6.webp'];
+    const THRESHOLD = 0.45; /* fraction of scroll-window where the break fires */
+
+    let isBroken = false;
+    let ticking = false;
+
+    function spawnCrumbs() {
+      if (!burst) return;
+      burst.replaceChildren();
+      const count = 22;
+      for (let i = 0; i < count; i++) {
+        const img = document.createElement('img');
+        img.src = 'Art/in-use/Packaging/' + CRUMBS[i % CRUMBS.length];
+        img.className = 'snap-crumb';
+        img.alt = '';
+        img.decoding = 'async';
+        const angle = Math.random() * Math.PI * 2;
+        const dist  = 30 + Math.random() * 110;
+        img.style.setProperty('--cx', (Math.cos(angle) * dist).toFixed(1) + 'px');
+        img.style.setProperty('--cy', (Math.sin(angle) * dist).toFixed(1) + 'px');
+        img.style.setProperty('--crot', (Math.random() * 540 - 270).toFixed(0) + 'deg');
+        img.style.setProperty('--cdur', (0.7 + Math.random() * 0.6).toFixed(2) + 's');
+        img.style.width = (3.75 + Math.random() * 8.25).toFixed(1) + 'px';
+        img.addEventListener('animationend', () => img.remove(), { once: true });
+        burst.appendChild(img);
+      }
+    }
+
+    function update() {
+      const rect = snap.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      const pivot = rect.top + rect.height / 2;
+      const start = vh * 0.70;
+      const end   = vh * 0.30;
+      let p = (start - pivot) / (start - end);
+      if (p < 0) p = 0;
+      if (p > 1) p = 1;
+
+      if (p >= THRESHOLD && !isBroken) {
+        isBroken = true;
+        snap.classList.add('broken');
+        spawnCrumbs();
+      } else if (p < THRESHOLD && isBroken) {
+        isBroken = false;
+        snap.classList.remove('broken');
+      }
+
+      const breakProgress = isBroken ? (p - THRESHOLD) / (1 - THRESHOLD) : 0;
+      snap.style.setProperty('--break', breakProgress.toFixed(3));
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+
+  /* ---------- Booth strip scroll-past detector ---------- */
+  (function () {
+    const booth = document.getElementById('booth');
+    if (!booth) return;
+    const body = document.body;
+    let ticking = false;
+    function check() {
+      const rect = booth.getBoundingClientRect();
+      body.classList.toggle('scrolled-past-booth', rect.bottom < 0);
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) { requestAnimationFrame(check); ticking = true; }
+    }, { passive: true });
+    check();
+  })();
+
+  /* ---------- Static pretzel pile in form section ---------- */
+  (function () {
+    const container = document.querySelector('.form-pretzels');
+    if (!container) return;
+
+    const FLAVORS = ['Original','TwystedHeat','Pickle','AllDressed','HoneyMustard'];
+    const HALVES = [
+      'Original-Half1.webp','Original-Half2.webp',
+      'TwystedHeat-Half1.webp','TwystedHeat-Half2.webp',
+      'Pickle-Half1.webp','Pickle-Half2.webp',
+      'alldressed-half1.webp','alldressed-half2.webp',
+      'honeymustard-half1.webp','honeymustard-half2.webp'
+    ];
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    const total = isMobile ? 260 : 600;
+    const halfChance = 0.15;
+    const rand = (a, b) => Math.random() * (b - a) + a;
+    const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+
+    for (let i = 0; i < total; i++) {
+      const isHalf = Math.random() < halfChance;
+      const src = isHalf
+        ? 'Art/in-use/Packaging/' + pick(HALVES)
+        : 'Art/in-use/Packaging/Twysts-' + pick(FLAVORS) + '-Whole.webp';
+
+      const img = document.createElement('img');
+      img.className = 'form-pretzel';
+      img.src = src;
+      img.alt = '';
+      img.decoding = 'async';
+      img.loading = 'lazy';
+
+      const size = isHalf ? rand(50, 90) : rand(70, 140);
+      img.style.width = size + 'px';
+      img.style.left   = rand(-10, 102) + '%';
+      img.style.bottom = rand(-15, 100) + '%';
+      img.style.transform = 'rotate(' + rand(0, 360) + 'deg)';
+
+      container.appendChild(img);
+    }
+  })();
+
+  /* ---------- Pretzel cascade in hero ---------- */
+  (function () {
+    const cascade = document.querySelector('.pretzel-cascade');
+    if (!cascade) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const FLAVORS = ['Original','TwystedHeat','Pickle','AllDressed','HoneyMustard'];
+    const HALVES  = [
+      'Original-Half1.webp','Original-Half2.webp',
+      'TwystedHeat-Half1.webp','TwystedHeat-Half2.webp',
+      'Pickle-Half1.webp','Pickle-Half2.webp',
+      'alldressed-half1.webp','alldressed-half2.webp',
+      'honeymustard-half1.webp','honeymustard-half2.webp'
+    ];
+    const CRUMBS  = ['crumb1.webp','crumb2.webp','crumb3.webp','crumb4.webp','crumb5.webp','crumb6.webp'];
+
+    const isMobile   = window.matchMedia('(max-width: 767px)').matches;
+    const perSide    = isMobile ? 7 : 17;
+    const halvesPer  = isMobile ? 1 : 2;   /* sparse — product reads sturdy */
+    const crumbsPer  = isMobile ? 12 : 28;
+    const ambientPer = isMobile ? 6 : 14;  /* very subtle background depth */
+
+    const layers = ['back','mid','front'];
+    const cfg = {
+      back:  { sizeMin: 60,  sizeMax: 100, blurMin: 1.4, blurMax: 2.4, speed: 0.10, durMin: 18, durMax: 28 },
+      mid:   { sizeMin: 90,  sizeMax: 140, blurMin: 0.2, blurMax: 0.9, speed: 0.28, durMin: 12, durMax: 20 },
+      front: { sizeMin: 120, sizeMax: 180, blurMin: 0,   blurMax: 0,   speed: 0.50, durMin: 8,  durMax: 14 }
+    };
+    /* Halves are smaller than wholes (just half a pretzel) and fall a touch faster. */
+    const halfCfg = {
+      back:  { sizeMin: 40,  sizeMax: 70,  blurMin: 1.2, blurMax: 2.0, speed: 0.10, durMin: 16, durMax: 24 },
+      mid:   { sizeMin: 60,  sizeMax: 100, blurMin: 0.2, blurMax: 0.8, speed: 0.28, durMin: 10, durMax: 16 },
+      front: { sizeMin: 80,  sizeMax: 130, blurMin: 0,   blurMax: 0,   speed: 0.50, durMin: 7,  durMax: 12 }
+    };
+    /* Flavor dust — tiny, fast, slight haze for atmosphere. */
+    const crumbCfg = {
+      back:  { sizeMin: 2, sizeMax: 5,  blurMin: 0.8, blurMax: 1.4, speed: 0.10, durMin: 9,  durMax: 14 },
+      mid:   { sizeMin: 3, sizeMax: 7,  blurMin: 0.2, blurMax: 0.6, speed: 0.32, durMin: 6,  durMax: 10 },
+      front: { sizeMin: 4, sizeMax: 9,  blurMin: 0,   blurMax: 0.2, speed: 0.55, durMin: 4,  durMax: 7 }
+    };
+    /* Ambient — distant, hazy, very slow. Sits behind everything for atmospheric depth. */
+    const ambientCfg = { sizeMin: 50, sizeMax: 95, blurMin: 3, blurMax: 5, speed: 0.05, durMin: 30, durMax: 50 };
+
+    const rand = (a, b) => Math.random() * (b - a) + a;
+    const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+    const pretzels = [];
+
+    function spawn(side, idx, src, configSet, layerOverride) {
+      const layer = layerOverride || layers[idx % 3];
+      const c = layerOverride ? configSet : configSet[layer];
+
+      const wrap = document.createElement('div');
+      wrap.className = 'pretzel-wrap layer-' + layer;
+      wrap.dataset.speed = c.speed;
+      if (side === 'left')  wrap.style.left  = rand(-4, 14) + '%';
+      else                  wrap.style.right = rand(-4, 14) + '%';
+
+      const inner = document.createElement('div');
+      inner.className = 'pretzel-inner';
+      const dur = rand(c.durMin, c.durMax);
+      inner.style.setProperty('--p-rot',   rand(-90, 90) + 'deg');
+      inner.style.setProperty('--p-size',  rand(c.sizeMin, c.sizeMax) + 'px');
+      inner.style.setProperty('--p-blur',  rand(c.blurMin, c.blurMax) + 'px');
+      inner.style.setProperty('--p-dur',   dur + 's');
+      inner.style.setProperty('--p-delay', (-rand(0, dur)) + 's');
+
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = '';
+      img.decoding = 'async';
+      img.loading = 'eager';
+
+      inner.appendChild(img);
+      wrap.appendChild(inner);
+      cascade.appendChild(wrap);
+      pretzels.push(wrap);
+    }
+
+    function wholeSrc(idx, side) {
+      const flavor = FLAVORS[(idx * 2 + (side === 'right' ? 1 : 0)) % FLAVORS.length];
+      return `Art/in-use/Packaging/Twysts-${flavor}-Whole.webp`;
+    }
+    function halfSrc()  { return 'Art/in-use/Packaging/' + pick(HALVES); }
+    function crumbSrc() { return 'Art/in-use/Packaging/' + pick(CRUMBS); }
+
+    for (let i = 0; i < ambientPer; i++) {
+      spawn('left',  i, wholeSrc(i, 'left'),  ambientCfg, 'ambient');
+      spawn('right', i, wholeSrc(i, 'right'), ambientCfg, 'ambient');
+    }
+    for (let i = 0; i < perSide; i++) {
+      spawn('left',  i, wholeSrc(i, 'left'),  cfg);
+      spawn('right', i, wholeSrc(i, 'right'), cfg);
+    }
+    for (let i = 0; i < halvesPer; i++) {
+      spawn('left',  i, halfSrc(), halfCfg);
+      spawn('right', i, halfSrc(), halfCfg);
+    }
+    for (let i = 0; i < crumbsPer; i++) {
+      spawn('left',  i, crumbSrc(), crumbCfg);
+      spawn('right', i, crumbSrc(), crumbCfg);
+    }
+
+    let ticking = false;
+    function updateParallax() {
+      const sy = window.scrollY;
+      for (const el of pretzels) {
+        const speed = parseFloat(el.dataset.speed);
+        el.style.setProperty('--scroll-y', (sy * speed) + 'px');
+      }
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) { requestAnimationFrame(updateParallax); ticking = true; }
+    }, { passive: true });
+    updateParallax();
+  })();
+
+  /* ---------- Flavor explorer ---------- */
+  (function () {
+    const FLAVORS = {
+      original: {
+        name: 'Original Recipe',
+        desc: "Crunchier take on a timeless favorite. Classic Original Recipe delivers pure, savory crunch in every twist – nothing extra, just everything you want.",
+        img: 'Art/in-use/Packaging/Twyst_Protein_Original_5oz.webp',
+        accent: '#C8A85B',
+        sugar: '0g',
+        whole: 'Art/in-use/Packaging/Twysts-Original-Whole.webp',
+        halves: ['Art/in-use/Packaging/Original-Half1.webp', 'Art/in-use/Packaging/Original-Half2.webp']
+      },
+      twistedheat: {
+        name: 'Twisted Heat',
+        desc: "For snackers who like it bold, new Twisted Heat brings a fiery blend of spices to kick up the flavor without weighing you down. Perfect spicy crunch to keep you reaching back in.",
+        img: 'Art/in-use/Packaging/Twyst_Protein_TwistedHeat_5oz.webp',
+        accent: '#D6242C',
+        sugar: '0g',
+        whole: 'Art/in-use/Packaging/Twysts-TwystedHeat-Whole.webp',
+        halves: ['Art/in-use/Packaging/TwystedHeat-Half1.webp', 'Art/in-use/Packaging/TwystedHeat-Half2.webp']
+      },
+      pickle: {
+        name: 'Dill Pickle',
+        desc: "Bright, tangy, and seriously craveable, this dill-forward favorite delivers a punch of Dill Pickle flavor in every bite. It's the crunchy pickle fix you can feel good about.",
+        img: 'Art/in-use/Packaging/Twyst_Protein_DillPickle_5oz.webp',
+        accent: '#5A8F3D',
+        sugar: '0g',
+        whole: 'Art/in-use/Packaging/Twysts-Pickle-Whole.webp',
+        halves: ['Art/in-use/Packaging/Pickle-Half1.webp', 'Art/in-use/Packaging/Pickle-Half2.webp']
+      },
+      alldressed: {
+        name: 'All Dressed',
+        desc: "Ultimate everything flavor – salty, tangy, savory and a little sweet – All Dressed brings full-on, multilayered taste to every twist. Your new go-to for big flavor and better crunch.",
+        img: 'Art/in-use/Packaging/Twyst_Protein_AllDressed_5oz.webp',
+        accent: '#3FB7C9',
+        sugar: '0g',
+        whole: 'Art/in-use/Packaging/Twysts-AllDressed-Whole.webp',
+        halves: ['Art/in-use/Packaging/alldressed-half1.webp', 'Art/in-use/Packaging/alldressed-half2.webp']
+      },
+      honeymustard: {
+        name: 'Honey Mustard',
+        desc: "Sweet, sharp, and totally snackable, Honey Mustard balances golden honey notes with bold mustard zing. The classic combo you love – elevated for modern snacking.",
+        img: 'Art/in-use/Packaging/Twyst_Protein_HoneyMustard_5oz.webp',
+        accent: '#E8B92C',
+        sugar: '1g',
+        whole: 'Art/in-use/Packaging/Twysts-HoneyMustard-Whole.webp',
+        halves: ['Art/in-use/Packaging/honeymustard-half1.webp', 'Art/in-use/Packaging/honeymustard-half2.webp']
+      }
+    };
+
+    const tabs   = document.querySelectorAll('.flavor-tab');
+    const bagEl  = document.getElementById('flavor-bag');
+    const nameEl = document.getElementById('flavor-name');
+    const descEl = document.getElementById('flavor-desc');
+    const root   = document.documentElement;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const CRUMBS = ['crumb1.webp','crumb2.webp','crumb3.webp','crumb4.webp','crumb5.webp','crumb6.webp'];
+    const rand = (a, b) => Math.random() * (b - a) + a;
+    const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+    let burstContainer = null;
+
+    function getBurstContainer() {
+      if (burstContainer) return burstContainer;
+      burstContainer = document.createElement('div');
+      burstContainer.className = 'flavor-burst';
+      burstContainer.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(burstContainer);
+      return burstContainer;
+    }
+
+    function spawnBurstPiece(side, src, sizeMin, sizeMax, durMin, durMax, blurMax) {
+      const container = getBurstContainer();
+      const el = document.createElement('img');
+      el.className = 'burst-pretzel';
+      el.src = src;
+      el.alt = '';
+      el.decoding = 'async';
+      const size = rand(sizeMin, sizeMax);
+      el.style.width = size + 'px';
+      el.style.height = 'auto';
+      el.style.setProperty('--p-rot', rand(-90, 90) + 'deg');
+      el.style.setProperty('--p-dur', rand(durMin, durMax) + 's');
+      el.style.animationDelay = rand(0, 0.35) + 's';
+      if (blurMax > 0) el.style.filter = `blur(${rand(0, blurMax)}px)`;
+      if (side === 'left') el.style.left  = rand(-2, 14) + '%';
+      else                 el.style.right = rand(-2, 14) + '%';
+      el.addEventListener('animationend', () => el.remove(), { once: true });
+      container.appendChild(el);
+    }
+
+    function burstFlavor(flavor) {
+      if (reduced) return;
+      for (const side of ['left','right']) {
+        for (let i = 0; i < 5; i++) {
+          spawnBurstPiece(side, flavor.whole, 110, 170, 2.6, 4.2, 0);
+        }
+        for (let i = 0; i < 2; i++) {
+          spawnBurstPiece(side, pick(flavor.halves), 70, 120, 2.4, 3.8, 0);
+        }
+        for (let i = 0; i < 14; i++) {
+          spawnBurstPiece(side, 'Art/in-use/Packaging/' + pick(CRUMBS), 4, 12, 1.8, 3.2, 0.4);
+        }
+      }
+    }
+
+    const sugarEl = document.getElementById('flavor-sugar');
+
+    function selectFlavor(key) {
+      const f = FLAVORS[key];
+      if (!f) return;
+      const alreadyActive = document.querySelector('.flavor-tab[aria-pressed="true"]');
+      const isSame = alreadyActive && alreadyActive.dataset.flavor === key;
+      nameEl.textContent = f.name;
+      descEl.textContent = f.desc;
+      bagEl.src = f.img;
+      bagEl.alt = f.name + ' pack';
+      if (sugarEl && f.sugar) sugarEl.textContent = f.sugar;
+      root.style.setProperty('--flavor-accent', f.accent);
+      tabs.forEach(t => t.setAttribute('aria-pressed', t.dataset.flavor === key ? 'true' : 'false'));
+      if (!isSame) burstFlavor(f);
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => selectFlavor(tab.dataset.flavor));
+    });
+  })();
+</script>
+</body>
+</html>

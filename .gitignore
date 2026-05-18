@@ -1,0 +1,40 @@
+# ============================================================
+# TWYSTS landing page — repo holds ONLY the deployable static site.
+# Everything the live page loads is in Art/in-use/ (WebP, ~5.6MB).
+# Deployable: index.html, privacy.html, terms.html, favicon.svg,
+#             Art/in-use/, DEPLOY-NOTES.md
+# ============================================================
+
+# OS / editor cruft (any depth)
+.DS_Store
+*.swp
+*~
+
+# Local tooling
+.claude/
+
+# Build artifacts & archives
+dist/
+*.zip
+
+# Working / source files — not part of the deployed site
+Source/
+Documents/
+Design/
+Proofs/
+Production/
+Research/
+Copy/
+wireframe.html
+claude-code-prompt.md
+
+# Raw / superseded art — the live site ONLY uses Art/in-use/
+Art/Packaging/
+Art/Logos/
+Art/Raw/
+Art/Stock/
+Art/x-old/
+Art/Fonts/
+Art/SVG/
+Art/twysts-sellsheet.jpg
+Art/twysts-sellsheet.pdf
