@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TWYSTS Protein+ — Boldly seasoned protein pretzels</title>
-<meta name="description" content="TWYSTS Protein+ — boldly seasoned protein pretzels with 6g protein per serving. Visit us at the Sweets & Snacks Expo, May 19–21, 2026, Booth #4621.">
+<meta name="description" content="TWYSTS Protein+ — boldly seasoned protein pretzels with 7g of protein per serving. Made for snackers who refuse to choose between flavor and function.">
 <link rel="canonical" href="https://www.twysts.com/">
 
 <!-- Open Graph / social share. Absolute URLs point at the production
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TWYSTS Protein+">
 <meta property="og:title" content="TWYSTS Protein+ — Boldly seasoned protein pretzels">
-<meta property="og:description" content="Bold seasoned protein pretzels with 6g of protein per serving. See us at the Sweets & Snacks Expo, May 19–21, 2026, Booth #4621.">
+<meta property="og:description" content="Bold seasoned protein pretzels with 7g of protein per serving. Made for snackers who refuse to choose between flavor and function.">
 <meta property="og:url" content="https://www.twysts.com/">
 <meta property="og:image" content="https://www.twysts.com/Art/in-use/og.jpg">
 <meta property="og:image:secure_url" content="https://www.twysts.com/Art/in-use/og.jpg">
@@ -22,7 +22,7 @@
 <meta property="og:image:alt" content="TWYSTS Protein+ logo above a snapped protein pretzel on a black background">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TWYSTS Protein+ — Boldly seasoned protein pretzels">
-<meta name="twitter:description" content="Bold seasoned protein pretzels with 6g of protein per serving. See us at the Sweets & Snacks Expo, Booth #4621.">
+<meta name="twitter:description" content="Bold seasoned protein pretzels with 7g of protein per serving. Made for snackers who refuse to choose between flavor and function.">
 <meta name="twitter:image" content="https://www.twysts.com/Art/in-use/og.jpg">
 <meta name="twitter:image:alt" content="TWYSTS Protein+ logo above a snapped protein pretzel on a black background">
 
@@ -457,6 +457,13 @@
     font-weight: 700;
     line-height: 1.05;
   }
+
+  /* ----- Tradeshow content hide (off-show) -----
+     Tradeshow content stays in the markup so it can be re-enabled next year.
+     To bring it back: either delete this rule, or remove the `expo-hidden`
+     class from the .booth-link in the header, the #booth strip, and the
+     #visit section in the markup. */
+  .expo-hidden { display: none !important; }
 
   /* ----- Booth strip ----- */
   .booth-strip {
@@ -1482,7 +1489,7 @@
       </nav>
     </div>
     <div class="header-end">
-      <a class="booth-link" href="#visit">Sweets &amp; Snacks Expo Booth #4621</a>
+      <a class="booth-link expo-hidden" href="#visit">Sweets &amp; Snacks Expo Booth #4621</a>
       <a class="btn nav-cta" href="#lead">Start Selling TWYSTS!</a>
     </div>
   </div>
@@ -1527,11 +1534,11 @@
           </g>
         </svg>
         <h1 id="hero-h">Fuel Up + Flavor On.</h1>
-        <p class="lede">Bold seasoned pretzels with a serious crunch and 6g of protein per serving. Made for snackers who refuse to choose between flavor and function.</p>
+        <p class="lede">Bold seasoned pretzels with a serious crunch and 7g of protein per serving. Made for snackers who refuse to choose between flavor and function.</p>
         <div class="hero-badges" aria-label="Product credentials">
           <div class="hero-badge">Made in USA</div>
           <div class="hero-badge">Non-GMO</div>
-          <div class="hero-badge">6g Protein</div>
+          <div class="hero-badge">7g Protein</div>
           <div class="hero-badge">Zero<br>Trans Fat</div>
         </div>
       </div>
@@ -1541,7 +1548,7 @@
   <!-- ============================================================
        2. BOOTH STRIP
        ============================================================ -->
-  <aside class="booth-strip" id="booth" aria-label="Tradeshow booth callout">
+  <aside class="booth-strip expo-hidden" id="booth" aria-label="Tradeshow booth callout">
     <div class="wrap">
       <span>Sweets &amp; Snacks Expo</span>
       <span>May 19–21, 2026</span>
@@ -1556,7 +1563,7 @@
     <div class="wrap">
       <p class="section-label">Why TWYSTS</p>
       <h2 id="why-h"><span>More protein.</span> <span>Bigger flavor.</span></h2>
-      <p class="why-intro"><span>Same crunch buyers expect from the set.</span> <span>Cleaner ingredient panel.</span> <span>6g of protein per serving.</span></p>
+      <p class="why-intro"><span>Same crunch buyers expect from the set.</span> <span>Cleaner ingredient panel.</span> <span>7g of protein per serving.</span></p>
 
       <div class="pretzel-snap" aria-hidden="true">
         <img class="snap-whole" src="Art/in-use/Packaging/Twysts-Original-Whole.webp" alt="" decoding="async" loading="lazy">
@@ -1566,7 +1573,7 @@
       </div>
 
       <div class="stat-grid">
-        <div class="stat"><span class="num">6g</span><span class="label">Protein per serving</span></div>
+        <div class="stat"><span class="num">7g</span><span class="label">Protein per serving</span></div>
         <div class="stat"><span class="num">Zero</span><span class="label">Trans Fat</span></div>
         <div class="stat"><span class="num">Whey</span><span class="label">Protein powered</span></div>
         <div class="stat"><span class="num">Non&#8209;GMO</span><span class="label">Ingredients</span></div>
@@ -1628,7 +1635,7 @@
           <h3 id="flavor-name">Original Recipe</h3>
           <p id="flavor-desc" class="flavor-desc">Crunchier take on a timeless favorite. Classic Original Recipe delivers pure, savory crunch in every twist – nothing extra, just everything you want.</p>
           <ul class="flavor-features">
-            <li class="flavor-feature"><span class="flavor-feature-icon" aria-hidden="true"><i class="fa-solid fa-dumbbell"></i></span><span>6g protein<br class="mobile-br"> per serving</span></li>
+            <li class="flavor-feature"><span class="flavor-feature-icon" aria-hidden="true"><i class="fa-solid fa-dumbbell"></i></span><span>7g protein<br class="mobile-br"> per serving</span></li>
             <li class="flavor-feature"><span class="flavor-feature-icon" aria-hidden="true"><i class="fa-solid fa-cubes-stacked"></i></span><span><span id="flavor-sugar">0g</span> added<br class="mobile-br"> sugar</span></li>
             <li class="flavor-feature"><span class="flavor-feature-icon" aria-hidden="true"><i class="fa-solid fa-bag-shopping"></i></span><span>Available in<br class="mobile-br"> 5oz &amp; 16oz</span></li>
           </ul>
@@ -1683,7 +1690,7 @@
         <div class="form-col">
           <p class="section-label">Start Selling TWYSTS</p>
           <h2 id="lead-h">Talk to our team.</h2>
-          <p class="form-intro">Drop your details. We'll send the sales sheet and book time at the booth.</p>
+          <p class="form-intro">Drop your details. The TWYSTS team will reach out in a snap with the sales sheet.</p>
           <form class="form-card" novalidate>
             <div class="field">
               <label for="f-name" class="sr-only">Name</label>
@@ -1723,7 +1730,7 @@
             </div>
             <p class="section-label">Message Received</p>
             <h2>We've got it.</h2>
-            <p class="form-success-msg">A team member will reach out shortly to chat and set up a time to meet you at Booth #4621.</p>
+            <p class="form-success-msg">The TWYSTS team will reach out in a snap. In the meantime, grab the sales sheet below.</p>
             <a class="btn" href="Art/in-use/twysts-sellsheet.pdf" download="TWYSTS-Protein-Plus-Sell-Sheet.pdf">Download the sales sheet now</a>
           </div>
         </div>
@@ -1739,7 +1746,7 @@
   <!-- ============================================================
        7. VISIT
        ============================================================ -->
-  <section id="visit" class="visit" aria-labelledby="visit-h">
+  <section id="visit" class="visit expo-hidden" aria-labelledby="visit-h">
     <div class="wrap visit-grid">
       <div>
         <p class="section-label">Come See Us</p>
